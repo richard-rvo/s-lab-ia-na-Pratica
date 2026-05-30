@@ -1,320 +1,1008 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S-LAB — Laboratório de Desenvolvimento Profissional em Saúde</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S-LAB — Laboratório de Desenvolvimento Profissional em Saúde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="ambient"></div>
+  <div class="ambient"></div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">
-    <img src="images/logo-color.png" alt="S-LAB Logo">
-  </div>
-  <ul class="nav-tabs" id="navTabs">
-    <li><button class="nav-tab active" data-tab="home">Início</button></li>
-    <li><button class="nav-tab" data-tab="framework">Framework</button></li>
-    <li><button class="nav-tab" data-tab="identidade">Identidade</button></li>
-    <li><button class="nav-tab" data-tab="copy">Copy</button></li>
-    <li><button class="nav-tab" data-tab="calendario">Calendário</button></li>
-    <li><button class="nav-tab" data-tab="imagens">Imagens</button></li>
-    <li><button class="nav-tab" data-tab="slides">Slides</button></li>
-    <li><button class="nav-tab" data-tab="imagempessoal">Imagem Pessoal</button></li>
-  </ul>
-  <span class="nav-badge">S-LAB · 2026</span>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="images/logo-color.png" alt="S-LAB Logo">
+    </div>
+    <ul class="nav-tabs" id="navTabs">
+      <li><button class="nav-tab active" data-tab="home">Início</button></li>
+      <li><button class="nav-tab" data-tab="framework">Framework</button></li>
+      <li><button class="nav-tab" data-tab="identidade">Identidade</button></li>
+      <li><button class="nav-tab" data-tab="copy">Copy</button></li>
+      <li><button class="nav-tab" data-tab="calendario">Calendário</button></li>
+      <li><button class="nav-tab" data-tab="reels">Reels</button></li>
+      <li><button class="nav-tab" data-tab="imagens">Imagens</button></li>
+      <li><button class="nav-tab" data-tab="slides">Slides</button></li>
+      <li><button class="nav-tab" data-tab="imagempessoal">Imagem Pessoal</button></li>
+    </ul>
+    <span class="nav-badge">S-LAB · 2026</span>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="heroSection">
-  <div>
-    <div class="hero-eyebrow">Laboratório de Desenvolvimento Profissional em Saúde</div>
-    <h1>Prompts que<br><span class="grad">convertem.</span></h1>
-    <p class="hero-sub">"A IA não vai substituir o profissional — mas o profissional que usa IA vai substituir o que não usa."</p>
-    <div class="hero-actions">
-      <button class="btn-primary" onclick="showTab('framework')">Começar agora →</button>
-      <button class="btn-ghost" onclick="showTab('copy')">Ver prompts de copy</button>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-mark">
-      <img src="images/logo-color-simbol.png" alt="S-LAB Symbol" class="hero-mark-img">
-    </div>
-    <div class="hero-chip chip-1">⚡️ 6 Agents prontos</div>
-    <div class="hero-chip chip-2">🎯 Framework P·C·T·F·R</div>
-    <div class="hero-chip chip-3">✦ Geração de Prompts</div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num">5</div>
-      <div class="stat-label">Agents prontos</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">30+</div>
-      <div class="stat-label">Prompts incluídos</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">4min</div>
-      <div class="stat-label">Vs 4 horas antes</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Stack gratuita</div>
-    </div>
-  </div>
-</div>
-
-<!-- MAIN -->
-<main>
-
-  <!-- ═══════════════════════════════ HOME ═══════════════════════════════ -->
-  <div class="tab-page active" id="tab-home">
-    <div class="section-head">
-      <div class="section-eyebrow">Bem-vindo</div>
-      <h2>Escolha um <span class="grad">Agent</span></h2>
-    </div>
-
-    <div class="prompts-grid">
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('framework')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🧠</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Base</div>
-            <h3>Framework P·C·T·F·R</h3>
-            <p>O método que transforma qualquer pedido em resultado profissional.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">5 elementos · Papel · Contexto · Tarefa · Formato · Restrições</p>
-        </div>
+  <!-- HERO -->
+  <section class="hero" id="heroSection">
+    <div>
+      <div class="hero-eyebrow">Laboratório de Desenvolvimento Profissional em Saúde</div>
+      <h1>Prompts que<br><span class="grad">convertem.</span></h1>
+      <p class="hero-sub">"A IA não vai substituir o profissional — mas o profissional que usa IA vai substituir o que
+        não usa."</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showTab('framework')">Começar agora →</button>
+        <button class="btn-ghost" onclick="showTab('copy')">Ver prompts de copy</button>
       </div>
-
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('identidade')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🎨</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 1</div>
-            <h3>Identidade Visual</h3>
-            <p>A fundação de toda produção visual. Paleta, tipografia e DNA completo.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Paleta hex · Tipografia · Elementos visuais · DNA Visual pronto</p>
-        </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-mark">
+        <img src="images/logo-color-simbol.png" alt="S-LAB Symbol" class="hero-mark-img">
       </div>
+      <div class="hero-chip chip-1">⚡️ 7 Agents prontos</div>
+      <div class="hero-chip chip-2">🎯 Framework P·C·T·F·R</div>
+      <div class="hero-chip chip-3">✦ Geração de Prompts</div>
+    </div>
+  </section>
 
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('copy')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">✍️</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 2</div>
-            <h3>Copy e Redes Sociais</h3>
-            <p>PAS · BAB · AIDA · Ganchos que param o scroll.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">38 de 58 alunos citaram criação de conteúdo como dor principal</p>
-        </div>
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Agents prontos</div>
       </div>
-
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('calendario')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📅</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 3</div>
-            <h3>Calendário de Conteúdo</h3>
-            <p>30 posts planejados em uma única sessão.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Educação · Autoridade · Conexão · Conversão — 4 pilares</p>
-        </div>
+      <div class="stat">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Prompts incluídos</div>
       </div>
-
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('imagens')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🖼️</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 4</div>
-            <h3>Imagens e Carrosseis</h3>
-            <p>Do prompt à imagem profissional. 6 elementos de framework.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">DALL-E 4o · Ideogram · Canva IA · 7 slides estruturados</p>
-        </div>
+      <div class="stat">
+        <div class="stat-num">4min</div>
+        <div class="stat-label">Vs 4 horas antes</div>
       </div>
-
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('slides')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📊</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 5</div>
-            <h3>Slides e Apresentações</h3>
-            <p>De ideia a apresentação profissional em menos de 3 minutos.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Gamma.app · Consulta · Palestra · Proposta</p>
-        </div>
-      </div>
-
-      <div class="prompt-card" style="cursor:pointer" onclick="showTab('imagempessoal')">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📸</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 6</div>
-            <h3>Imagem Pessoal (RostoIA)</h3>
-            <p>Retratos profissionais e posts com lettering baseados no seu rosto e DNA visual.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Rosto real · Portfólio realista · Posts com Lettering</p>
-        </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Stack gratuita</div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════ FRAMEWORK ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-framework">
-    <div class="framework-card">
-      <div class="section-eyebrow" style="color:var(--orange-300);">Método base</div>
-      <h2>P·C·T·F·R</h2>
-      <p>O método único que serve para qualquer Agent. 5 elementos que transformam qualquer pedido em resultado profissional.</p>
-      <div class="pctfr-grid">
-        <div class="pctfr-item">
-          <div class="pctfr-letter">P</div>
-          <div class="pctfr-name">Papel</div>
-          <div class="pctfr-desc">Quem é a IA? Define especialidade e foco antes de qualquer tarefa.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter">C</div>
-          <div class="pctfr-name">Contexto</div>
-          <div class="pctfr-desc">Qual a situação? Quem vai ler, usar ou receber o resultado.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter">T</div>
-          <div class="pctfr-name">Tarefa</div>
-          <div class="pctfr-desc">O que exatamente? Específico com número e forma definidos.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter">F</div>
-          <div class="pctfr-name">Formato</div>
-          <div class="pctfr-desc">Como entregar? Estrutura exata do output esperado.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter">R</div>
-          <div class="pctfr-name">Restrições</div>
-          <div class="pctfr-desc">O que evitar? Remove erros antes de ocorrer.</div>
-        </div>
-      </div>
-    </div>
+  <!-- MAIN -->
+  <main>
 
-    <div class="prompts-grid">
-      <!-- PROMPT FRACO vs FORTE -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">❌</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Evite</div>
-            <h3>Prompt Fraco</h3>
-            <p>Entrega o mínimo porque pede o mínimo.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="prompt-raw" style="background:rgba(233,77,29,0.04);border-color:rgba(233,77,29,0.2);">"Me faz um post sobre alimentação saudável"</div>
-          <p style="font-size:13px;color:var(--stone);margin-top:12px;font-family:var(--font-display);line-height:1.5;">Resultado: post genérico com "alimentação equilibrada" e "hábitos saudáveis". Sem voz, sem conversão.</p>
-        </div>
+    <!-- ═══════════════════════════════ HOME ═══════════════════════════════ -->
+    <div class="tab-page active" id="tab-home">
+      <div class="section-head">
+        <div class="section-eyebrow">Bem-vindo</div>
+        <h2>Escolha um <span class="grad">Agent</span></h2>
       </div>
 
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">✅</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Use</div>
-            <h3>Prompt Forte (P·C·T·F·R)</h3>
-            <p>Cada elemento faz a IA trabalhar com intenção.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="prompt-raw">Você é [NUTRICIONISTA] especialista em [EMAGRECIMENTO].
-(P) Papel com especialidade e foco definidos.
-
-Meu público são mulheres [28–45 anos] que trabalham muito.
-(C) Contexto: quem vai ler esse conteúdo.
-
-Crie um carrossel de [7 slides] sobre lanches para
-não sentir fome à tarde.
-(T) Tarefa específica com número definido.
-
-[SLIDE 1]: headline impactante.
-[SLIDES 2–6]: dica + 2 linhas. [SLIDE 7]: CTA.
-(F) Formato exato entregue.
-
-Sem termos técnicos. Tom [leve e motivador].
-(R) Restrições claras — o que não fazer.</div>
-        </div>
-      </div>
-
-      <!-- Gerador PCTFR interativo -->
-      <div class="prompt-card" style="grid-column: 1 / -1;">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">⚡️</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Gerador</div>
-            <h3>Monte seu prompt P·C·T·F·R</h3>
-            <p>Preencha os 5 campos e gere seu prompt estruturado com IA.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">P — Papel (quem é a IA?)</label>
-            <input type="text" class="form-input" id="pctfr-papel" placeholder="Ex: nutricionista especialista em emagrecimento para mulheres 30–45 anos" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">C — Contexto (qual a situação?)</label>
-            <textarea class="form-textarea" id="pctfr-contexto" placeholder="Ex: meu público são profissionais que trabalham muito e têm pouco tempo para se cuidar"></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label">T — Tarefa (o que exatamente?)</label>
-            <textarea class="form-textarea" id="pctfr-tarefa" placeholder="Ex: crie um carrossel de 7 slides sobre lanches saudáveis que não precisam de preparo"></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label">F — Formato (como entregar?)</label>
-            <textarea class="form-textarea" id="pctfr-formato" placeholder="Ex: Slide 1: headline. Slides 2-6: dica + 2 linhas. Slide 7: CTA para salvar"></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label">R — Restrições (o que evitar?)</label>
-            <input type="text" class="form-input" id="pctfr-restricoes" placeholder="Ex: sem termos técnicos, sem mencionar calorias, máx. 12 palavras por slide" />
-          </div>
-          <button class="generate-btn" onclick="generatePCTFR()">
-            <span class="spinner" id="pctfr-spin"></span>
-            <span id="pctfr-btn-text">Gerar prompt estruturado →</span>
-          </button>
-          <div class="output-area" id="pctfr-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt P·C·T·F·R Gerado</span>
-              <button class="copy-btn" onclick="copyOutput('pctfr-result', this)">Copiar Prompt</button>
+      <div class="prompts-grid">
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('framework')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🧠</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Base</div>
+              <h3>Framework P·C·T·F·R</h3>
+              <p>O método que transforma qualquer pedido em resultado profissional.</p>
             </div>
-            <textarea readonly class="output-text" id="pctfr-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">5 elementos · Papel · Contexto
+              · Tarefa · Formato · Restrições</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('identidade')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎨</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 1</div>
+              <h3>Identidade Visual</h3>
+              <p>A fundação de toda produção visual. Paleta, tipografia e DNA completo.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Paleta hex · Tipografia ·
+              Elementos visuais · DNA Visual pronto</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('copy')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">✍️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 2</div>
+              <h3>Copy e Redes Sociais</h3>
+              <p>PAS · BAB · AIDA · Ganchos que param o scroll.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">38 de 58 alunos citaram
+              criação de conteúdo como dor principal</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('calendario')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📅</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 3</div>
+              <h3>Calendário de Conteúdo</h3>
+              <p>30 posts planejados em uma única sessão.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Educação · Autoridade ·
+              Conexão · Conversão — 4 pilares</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('reels')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎬</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 3.5</div>
+              <h3>Roteiro Reels</h3>
+              <p>Roteiros virais de Reels (Wallace Leite) de alta retenção baseados no seu nicho.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Hooks explosivos · Loops de retenção · Automação ManyChat</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('imagens')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🖼️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 4</div>
+              <h3>Imagens e Carrosseis</h3>
+              <p>Do prompt à imagem profissional. 6 elementos de framework.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">DALL-E 4o · Ideogram · Canva
+              IA · 7 slides estruturados</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('slides')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📊</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 5</div>
+              <h3>Slides e Apresentações</h3>
+              <p>De ideia a apresentação profissional em menos de 3 minutos.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Gamma.app · Consulta ·
+              Palestra · Proposta</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('imagempessoal')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📸</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 6</div>
+              <h3>Imagem Pessoal (RostoIA)</h3>
+              <p>Retratos profissionais e posts com lettering baseados no seu rosto e DNA visual.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Rosto real · Portfólio
+              realista · Posts com Lettering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ FRAMEWORK ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-framework">
+      <div class="framework-card">
+        <div class="section-eyebrow" style="color:var(--orange-300);">Método base</div>
+        <h2>P·C·T·F·R</h2>
+        <p>O método único que serve para qualquer Agent. 5 elementos que transformam qualquer pedido em resultado
+          profissional.</p>
+        <div class="pctfr-grid">
+          <div class="pctfr-item">
+            <div class="pctfr-letter">P</div>
+            <div class="pctfr-name">Papel</div>
+            <div class="pctfr-desc">Quem é a IA? Define especialidade e foco antes de qualquer tarefa.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter">C</div>
+            <div class="pctfr-name">Contexto</div>
+            <div class="pctfr-desc">Qual a situação? Quem vai ler, usar ou receber o resultado.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter">T</div>
+            <div class="pctfr-name">Tarefa</div>
+            <div class="pctfr-desc">O que exatamente? Específico com número e forma definidos.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter">F</div>
+            <div class="pctfr-name">Formato</div>
+            <div class="pctfr-desc">Como entregar? Estrutura exata do output esperado.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter">R</div>
+            <div class="pctfr-name">Restrições</div>
+            <div class="pctfr-desc">O que evitar? Remove erros antes de ocorrer.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompts-grid">
+        <!-- PROMPT FRACO vs FORTE -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">❌</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Evite</div>
+              <h3>Prompt Fraco</h3>
+              <p>Entrega o mínimo porque pede o mínimo.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="prompt-raw" style="background:rgba(233,77,29,0.04);border-color:rgba(233,77,29,0.2);">"Me faz um
+              post sobre alimentação saudável"</div>
+            <p
+              style="font-size:13px;color:var(--stone);margin-top:12px;font-family:var(--font-display);line-height:1.5;">
+              Resultado: post genérico com "alimentação equilibrada" e "hábitos saudáveis". Sem voz, sem conversão.</p>
+          </div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">✅</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Use</div>
+              <h3>Prompt Forte (P·C·T·F·R)</h3>
+              <p>Cada elemento faz a IA trabalhar com intenção.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="prompt-raw">Você é [NUTRICIONISTA] especialista em [EMAGRECIMENTO].
+              (P) Papel com especialidade e foco definidos.
+
+              Meu público são mulheres [28–45 anos] que trabalham muito.
+              (C) Contexto: quem vai ler esse conteúdo.
+
+              Crie um carrossel de [7 slides] sobre lanches para
+              não sentir fome à tarde.
+              (T) Tarefa específica com número definido.
+
+              [SLIDE 1]: headline impactante.
+              [SLIDES 2–6]: dica + 2 linhas. [SLIDE 7]: CTA.
+              (F) Formato exato entregue.
+
+              Sem termos técnicos. Tom [leve e motivador].
+              (R) Restrições claras — o que não fazer.</div>
+          </div>
+        </div>
+
+        <!-- Gerador PCTFR interativo -->
+        <div class="prompt-card" style="grid-column: 1 / -1;">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">⚡️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Gerador</div>
+              <h3>Monte seu prompt P·C·T·F·R</h3>
+              <p>Preencha os 5 campos e gere seu prompt estruturado com IA.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">P — Papel (quem é a IA?)</label>
+              <input type="text" class="form-input" id="pctfr-papel"
+                placeholder="Ex: nutricionista especialista em emagrecimento para mulheres 30–45 anos" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">C — Contexto (qual a situação?)</label>
+              <textarea class="form-textarea" id="pctfr-contexto"
+                placeholder="Ex: meu público são profissionais que trabalham muito e têm pouco tempo para se cuidar"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">T — Tarefa (o que exatamente?)</label>
+              <textarea class="form-textarea" id="pctfr-tarefa"
+                placeholder="Ex: crie um carrossel de 7 slides sobre lanches saudáveis que não precisam de preparo"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">F — Formato (como entregar?)</label>
+              <textarea class="form-textarea" id="pctfr-formato"
+                placeholder="Ex: Slide 1: headline. Slides 2-6: dica + 2 linhas. Slide 7: CTA para salvar"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">R — Restrições (o que evitar?)</label>
+              <input type="text" class="form-input" id="pctfr-restricoes"
+                placeholder="Ex: sem termos técnicos, sem mencionar calorias, máx. 12 palavras por slide" />
+            </div>
+            <button class="generate-btn" onclick="generatePCTFR()">
+              <span class="spinner" id="pctfr-spin"></span>
+              <span id="pctfr-btn-text">Gerar prompt estruturado →</span>
+            </button>
+            <div class="output-area" id="pctfr-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt P·C·T·F·R Gerado</span>
+                <button class="copy-btn" onclick="copyOutput('pctfr-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="pctfr-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ IDENTIDADE ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-identidade">
+      <div class="agent-header">
+        <div class="agent-number">01</div>
+        <div class="agent-info">
+          <h2>Identidade Visual</h2>
+          <p>A fundação de toda a produção visual. Sem isso, os outros Agents ficam inconsistentes.</p>
+        </div>
+      </div>
+
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="prompts-grid">
+        <!-- Identidade Completa -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎨</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 1.1</div>
+              <h3>Identidade Visual Completa</h3>
+              <p>Paleta, tipografia, elements visuais e DNA em uma sessão.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade / Nicho</label>
+              <input type="text" class="form-input" id="iv-especialidade"
+                placeholder="Ex: nutricionista, fisioterapeuta, coach de carreira" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público-alvo</label>
+              <input type="text" class="form-input" id="iv-publico"
+                placeholder="Ex: mulheres 30–45 anos que trabalham muito" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">3 adjetivos da marca</label>
+              <input type="text" class="form-input" id="iv-adjetivos" placeholder="Ex: empático, moderno, acolhedor" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Referência visual (opcional)</label>
+              <input type="text" class="form-input" id="iv-referencia" placeholder="Ex: @nomeperfil, marca X" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Elementos a evitar na marca (opcional)</label>
+              <input type="text" class="form-input" id="iv-evitar"
+                placeholder="Ex: cor vermelha, símbolos médicos clichês, fotos genéricas" />
+            </div>
+            <button class="generate-btn" onclick="generateIdentidade()">
+              <span class="spinner" id="iv-spin"></span>
+              <span id="iv-btn-text">Gerar identidade visual →</span>
+            </button>
+            <div class="output-area" id="iv-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Identidade Visual Completa</span>
+                <button class="copy-btn" onclick="copyOutput('iv-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="iv-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paleta + Tipografia -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🖌️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 1.2</div>
+              <h3>Paleta + Tipografia</h3>
+              <p>Hex codes, significado psicológico e CSS pronto para copiar.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade</label>
+              <input type="text" class="form-input" id="pt-especialidade" placeholder="Ex: psicóloga clínica" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Perfil da marca (3 adjetivos)</label>
+              <input type="text" class="form-input" id="pt-adjetivos" placeholder="Ex: serena, intelectual, próxima" />
+            </div>
+            <button class="generate-btn" onclick="generatePaleta()">
+              <span class="spinner" id="pt-spin"></span>
+              <span id="pt-btn-text">Gerar paleta e tipografia →</span>
+            </button>
+            <div class="output-area" id="pt-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Paleta + Tipografia</span>
+                <button class="copy-btn" onclick="copyOutput('pt-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="pt-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DNA Visual -->
+        <div class="prompt-card" style="grid-column: 1 / -1;">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🧬</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 1.3</div>
+              <h3>Bloco DNA Visual</h3>
+              <p>Cole no início de todo prompt de imagem. Garante consistência em 100% dos posts.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Estilo visual</label>
+              <select class="form-select" id="dna-estilo">
+                <option>fotografia lifestyle</option>
+                <option>flat lay</option>
+                <option>ilustração clean</option>
+                <option>editorial</option>
+                <option>fotografia documental</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cores principais (3 cores)</label>
+              <input type="text" class="form-input" id="dna-cores"
+                placeholder="Ex: branco, verde-salvia, laranja quente" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Iluminação</label>
+              <select class="form-select" id="dna-iluminacao">
+                <option>soft natural light from left</option>
+                <option>luz difusa de estúdio</option>
+                <option>iluminação quente de janela</option>
+                <option>luz natural overhead</option>
+                <option>rim light sutil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Composição preferida</label>
+              <select class="form-select" id="dna-composicao">
+                <option>overhead</option>
+                <option>close-up</option>
+                <option>plano médio</option>
+                <option>misto por slide</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Elementos recorrentes da marca</label>
+              <input type="text" class="form-input" id="dna-elementos"
+                placeholder="Ex: folhas verdes, texturas de linho, círculos" />
+            </div>
+            <button class="generate-btn" onclick="generateDNA()">
+              <span class="spinner" id="dna-spin"></span>
+              <span id="dna-btn-text">Gerar bloco DNA Visual →</span>
+            </button>
+            <div class="output-area" id="dna-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Bloco DNA Visual</span>
+                <button class="copy-btn" onclick="copyOutput('dna-result', this)">Copiar DNA</button>
+              </div>
+              <textarea readonly class="output-text" id="dna-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ COPY ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-copy">
+      <div class="agent-header">
+        <div class="agent-number">02</div>
+        <div class="agent-info">
+          <h2>Copy e Redes Sociais</h2>
+          <p>PAS · BAB · AIDA · Ganchos que param o scroll</p>
+        </div>
+      </div>
+
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>"38 de 58 alunos citaram criação de conteúdo como a principal dor do negócio. Este Agent resolve isso."</p>
+      </div>
+
+      <div class="prompts-grid">
+        <!-- Agent Copywriter Completo -->
+        <div class="prompt-card" style="grid-column: 1 / -1;">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">✍️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 2.1</div>
+              <h3>Prompt do Agent Copywriting (Persona Completa)</h3>
+              <p>Gere o prompt do sistema para configurar o Claude/ChatGPT como o Agent Copywriter da S-LAB.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade / Nicho</label>
+              <input type="text" class="form-input" id="copy-especialidade"
+                placeholder="Ex: nutricionista esportiva, cardiologista pediátrico" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público-alvo e Dor principal</label>
+              <input type="text" class="form-input" id="copy-publico"
+                placeholder="Ex: mulheres 30–45 anos que querem emagrecer sem radicalismos" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tom de voz (adjetivos)</label>
+              <input type="text" class="form-input" id="copy-tom"
+                placeholder="Ex: acolhedor, profissional, motivador" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Palavras ou abordagens a evitar (opcional)</label>
+              <input type="text" class="form-input" id="copy-evitar"
+                placeholder="Ex: jargões técnicos, falar de emagrecimento rápido" />
+            </div>
+            <button class="generate-btn" onclick="generateCopyAgent()">
+              <span class="spinner" id="copy-agent-spin"></span>
+              <span id="copy-agent-btn-text">Gerar prompt do Agent Copywriter →</span>
+            </button>
+            <div class="output-area" id="copy-agent-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt do Agent Copywriter</span>
+                <button class="copy-btn" onclick="copyOutput('copy-agent-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="copy-agent-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAS -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎯</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 2.2 · Audiência fria · Instagram</div>
+              <h3>PAS — Problema · Agitação · Solução</h3>
+              <p>Vai direto na dor. Audiência fria responde melhor a dor do que a promessa.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade</label>
+              <input type="text" class="form-input" id="pas-especialidade" placeholder="Ex: nutricionista esportiva" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público-alvo</label>
+              <input type="text" class="form-input" id="pas-publico"
+                placeholder="Ex: homens 25–40 anos que treinam mas não têm resultado" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tom</label>
+              <select class="form-select" id="pas-tom">
+                <option>empático</option>
+                <option>direto</option>
+                <option>motivador</option>
+                <option>provocativo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tema / dor específica</label>
+              <input type="text" class="form-input" id="pas-tema"
+                placeholder="Ex: não conseguir perder gordura mesmo comendo pouco" />
+            </div>
+            <button class="generate-btn" onclick="generatePAS()">
+              <span class="spinner" id="pas-spin"></span>
+              <span id="pas-btn-text">Gerar post PAS →</span>
+            </button>
+            <div class="output-area" id="pas-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Estruturado PAS</span>
+                <button class="copy-btn" onclick="copyOutput('pas-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="pas-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BAB -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">✨</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 2.3 · Audiência morna · Instagram</div>
+              <h3>BAB — Before · After · Bridge</h3>
+              <p>Venda a vida, não o produto. Cenário real → resultado concreto → seu método.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Público</label>
+              <input type="text" class="form-input" id="bab-publico"
+                placeholder="Ex: mães que perderam a autoconfiança após a maternidade" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Situação frustrante atual (Before)</label>
+              <input type="text" class="form-input" id="bab-before"
+                placeholder="Ex: se olha no espelho e não se reconhece" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Resultado de vida desejado (After)</label>
+              <input type="text" class="form-input" id="bab-after"
+                placeholder="Ex: acorda disposta, se veste com prazer, está presente com os filhos" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Seu método (Bridge)</label>
+              <input type="text" class="form-input" id="bab-bridge"
+                placeholder="Ex: protocolo de 21 dias com ajustes progressivos" />
+            </div>
+            <button class="generate-btn" onclick="generateBAB()">
+              <span class="spinner" id="bab-spin"></span>
+              <span id="bab-btn-text">Gerar post BAB →</span>
+            </button>
+            <div class="output-area" id="bab-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Estruturado BAB</span>
+                <button class="copy-btn" onclick="copyOutput('bab-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="bab-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AIDA -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🔥</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 2.4 · Audiência quente · Oferta direta</div>
+              <h3>AIDA — Atenção · Interesse · Desejo · Ação</h3>
+              <p>Para quando o público já te conhece e está pronto para agir.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">O que está comunicando / oferta</label>
+              <input type="text" class="form-input" id="aida-oferta"
+                placeholder="Ex: abertura de consulta online de avaliação postural" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público</label>
+              <input type="text" class="form-input" id="aida-publico"
+                placeholder="Ex: atletas amadores com dor crônica" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Principal benefício</label>
+              <input type="text" class="form-input" id="aida-beneficio"
+                placeholder="Ex: identifica a causa da dor em 45 minutos" />
+            </div>
+            <button class="generate-btn" onclick="generateAIDA()">
+              <span class="spinner" id="aida-spin"></span>
+              <span id="aida-btn-text">Gerar post AIDA →</span>
+            </button>
+            <div class="output-area" id="aida-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Estruturado AIDA</span>
+                <button class="copy-btn" onclick="copyOutput('aida-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="aida-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gancho -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">⚓</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 2.5 · Abertura</div>
+              <h3>Ganchos que param o scroll</h3>
+              <p>A primeira linha decide se o algoritmo distribui ou enterra seu post.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Nicho / especialidade</label>
+              <input type="text" class="form-input" id="gancho-nicho" placeholder="Ex: dermatologista estética" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tema do post</label>
+              <input type="text" class="form-input" id="gancho-tema"
+                placeholder="Ex: erros na rotina de skincare que envelhecem a pele" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo de gancho</label>
+              <select class="form-select" id="gancho-tipo">
+                <option>dado + consequência</option>
+                <option>pergunta direta provocativa</option>
+                <option>afirmação polêmica</option>
+                <option>erro comum do nicho</option>
+                <option>confissão pessoal</option>
+                <option>variado (gere 5 opções)</option>
+              </select>
+            </div>
+            <button class="generate-btn" onclick="generateGancho()">
+              <span class="spinner" id="gancho-spin"></span>
+              <span id="gancho-btn-text">Gerar ganchos →</span>
+            </button>
+            <div class="output-area" id="gancho-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Ganchos</span>
+                <button class="copy-btn" onclick="copyOutput('gancho-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="gancho-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ CALENDÁRIO ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-calendario">
+      <div class="agent-header">
+        <div class="agent-number">03</div>
+        <div class="agent-info">
+          <h2>Calendário de Conteúdo</h2>
+          <p>Consistência bate frequência — 3x por semana consistente supera 7x irregular.</p>
+        </div>
+      </div>
+
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="framework-card" style="margin-bottom:32px;">
+        <div class="section-eyebrow" style="color:var(--orange-300);">Os 4 Pilares</div>
+        <h2 style="font-size:32px;margin-bottom:24px;">Distribuição ideal</h2>
+        <div class="pctfr-grid" style="grid-template-columns:repeat(4,1fr);">
+          <div class="pctfr-item">
+            <div class="pctfr-letter" style="font-size:28px;">40%</div>
+            <div class="pctfr-name">Educação</div>
+            <div class="pctfr-desc">Ensina algo prático do nicho. Gera salvamentos e compartilhamentos.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter" style="font-size:28px;">25%</div>
+            <div class="pctfr-name">Autoridade</div>
+            <div class="pctfr-desc">Cases, resultados, metodologia. Transforma seguidor em paciente.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter" style="font-size:28px;">25%</div>
+            <div class="pctfr-name">Conexão</div>
+            <div class="pctfr-desc">Bastidores, rotina, opinião pessoal. Humaniza a marca.</div>
+          </div>
+          <div class="pctfr-item">
+            <div class="pctfr-letter" style="font-size:28px;">10%</div>
+            <div class="pctfr-name">Conversão</div>
+            <div class="pctfr-desc">CTA direto para consulta ou serviço. Pouco, mas cirúrgico.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompts-grid single">
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📅</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 3.1</div>
+              <h3>Calendário de 30 Posts</h3>
+              <p>Um mês de conteúdo estratégico em uma sessão. Tabela com tema, formato e gancho.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade</label>
+              <input type="text" class="form-input" id="cal-especialidade"
+                placeholder="Ex: fisioterapeuta especialista em dor crônica" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público-alvo e Dor Principal</label>
+              <input type="text" class="form-input" id="cal-publico"
+                placeholder="Ex: adultos 35–55 anos com dor nas costas por trabalho sedentário" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Formatos Desejados</label>
+              <input type="text" class="form-input" id="cal-formatos"
+                placeholder="Ex: carrossel, reels, estático, stories" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Foco / Destaque do Mês</label>
+              <input type="text" class="form-input" id="cal-foco"
+                placeholder="Ex: agendamento de check-up postural anual, vendas da mentoria" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Temas ou Abordagens a Evitar (opcional)</label>
+              <input type="text" class="form-input" id="cal-evitar"
+                placeholder="Ex: falar de cirurgia, termos médicos complexos" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nº de posts</label>
+              <select class="form-select" id="cal-num">
+                <option value="15">15 posts (2 semanas)</option>
+                <option value="20">20 posts</option>
+                <option value="30" selected>30 posts (1 mês)</option>
+              </select>
+            </div>
+            <button class="generate-btn" onclick="generateCalendario()">
+              <span class="spinner" id="cal-spin"></span>
+              <span id="cal-btn-text">Gerar calendário editorial →</span>
+            </button>
+            <div class="output-area" id="cal-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Calendário Editorial</span>
+                <button class="copy-btn" onclick="copyOutput('cal-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="cal-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
               </div>
             </div>
           </div>
@@ -323,215 +1011,13 @@ Sem termos técnicos. Tom [leve e motivador].
     </div>
   </div>
 
-  <!-- ═══════════════════════════════ IDENTIDADE ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-identidade">
+  <!-- ═══════════════════════════════ REELS ═══════════════════════════════ -->
+  <div class="tab-page" id="tab-reels">
     <div class="agent-header">
-      <div class="agent-number">01</div>
+      <div class="agent-number">3.5</div>
       <div class="agent-info">
-        <h2>Identidade Visual</h2>
-        <p>A fundação de toda a produção visual. Sem isso, os outros Agents ficam inconsistentes.</p>
-      </div>
-    </div>
-
-    <!-- Workflow Steps Grid -->
-    <div class="steps-workflow">
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">1</div>
-        <div class="step-workflow-icon">✏️</div>
-        <div class="step-workflow-title">Preencha seus Dados</div>
-        <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e posicionamento.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">2</div>
-        <div class="step-workflow-icon">📋</div>
-        <div class="step-workflow-title">Copie o Prompt</div>
-        <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto. Clique em Copiar.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">3</div>
-        <div class="step-workflow-icon">🤖</div>
-        <div class="step-workflow-title">Cole na sua IA</div>
-        <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o prompt como primeira mensagem.</div>
-      </div>
-    </div>
-
-    <div class="prompts-grid">
-      <!-- Identidade Completa -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🎨</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 1.1</div>
-            <h3>Identidade Visual Completa</h3>
-            <p>Paleta, tipografia, elements visuais e DNA em uma sessão.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Especialidade / Nicho</label>
-            <input type="text" class="form-input" id="iv-especialidade" placeholder="Ex: nutricionista, fisioterapeuta, coach de carreira" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público-alvo</label>
-            <input type="text" class="form-input" id="iv-publico" placeholder="Ex: mulheres 30–45 anos que trabalham muito" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">3 adjetivos da marca</label>
-            <input type="text" class="form-input" id="iv-adjetivos" placeholder="Ex: empático, moderno, acolhedor" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Referência visual (opcional)</label>
-            <input type="text" class="form-input" id="iv-referencia" placeholder="Ex: @nomeperfil, marca X" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Elementos a evitar na marca (opcional)</label>
-            <input type="text" class="form-input" id="iv-evitar" placeholder="Ex: cor vermelha, símbolos médicos clichês, fotos genéricas" />
-          </div>
-          <button class="generate-btn" onclick="generateIdentidade()">
-            <span class="spinner" id="iv-spin"></span>
-            <span id="iv-btn-text">Gerar identidade visual →</span>
-          </button>
-          <div class="output-area" id="iv-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Identidade Visual Completa</span>
-              <button class="copy-btn" onclick="copyOutput('iv-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="iv-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Paleta + Tipografia -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🖌️</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 1.2</div>
-            <h3>Paleta + Tipografia</h3>
-            <p>Hex codes, significado psicológico e CSS pronto para copiar.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Especialidade</label>
-            <input type="text" class="form-input" id="pt-especialidade" placeholder="Ex: psicóloga clínica" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Perfil da marca (3 adjetivos)</label>
-            <input type="text" class="form-input" id="pt-adjetivos" placeholder="Ex: serena, intelectual, próxima" />
-          </div>
-          <button class="generate-btn" onclick="generatePaleta()">
-            <span class="spinner" id="pt-spin"></span>
-            <span id="pt-btn-text">Gerar paleta e tipografia →</span>
-          </button>
-          <div class="output-area" id="pt-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Paleta + Tipografia</span>
-              <button class="copy-btn" onclick="copyOutput('pt-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="pt-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DNA Visual -->
-      <div class="prompt-card" style="grid-column: 1 / -1;">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🧬</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 1.3</div>
-            <h3>Bloco DNA Visual</h3>
-            <p>Cole no início de todo prompt de imagem. Garante consistência em 100% dos posts.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Estilo visual</label>
-            <select class="form-select" id="dna-estilo">
-              <option>fotografia lifestyle</option>
-              <option>flat lay</option>
-              <option>ilustração clean</option>
-              <option>editorial</option>
-              <option>fotografia documental</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Cores principais (3 cores)</label>
-            <input type="text" class="form-input" id="dna-cores" placeholder="Ex: branco, verde-salvia, laranja quente" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Iluminação</label>
-            <select class="form-select" id="dna-iluminacao">
-              <option>soft natural light from left</option>
-              <option>luz difusa de estúdio</option>
-              <option>iluminação quente de janela</option>
-              <option>luz natural overhead</option>
-              <option>rim light sutil</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Composição preferida</label>
-            <select class="form-select" id="dna-composicao">
-              <option>overhead</option>
-              <option>close-up</option>
-              <option>plano médio</option>
-              <option>misto por slide</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Elementos recorrentes da marca</label>
-            <input type="text" class="form-input" id="dna-elementos" placeholder="Ex: folhas verdes, texturas de linho, círculos" />
-          </div>
-          <button class="generate-btn" onclick="generateDNA()">
-            <span class="spinner" id="dna-spin"></span>
-            <span id="dna-btn-text">Gerar bloco DNA Visual →</span>
-          </button>
-          <div class="output-area" id="dna-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Bloco DNA Visual</span>
-              <button class="copy-btn" onclick="copyOutput('dna-result', this)">Copiar DNA</button>
-            </div>
-            <textarea readonly class="output-text" id="dna-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════ COPY ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-copy">
-    <div class="agent-header">
-      <div class="agent-number">02</div>
-      <div class="agent-info">
-        <h2>Copy e Redes Sociais</h2>
-        <p>PAS · BAB · AIDA · Ganchos que param o scroll</p>
+        <h2>Roteiro de Reels Virais</h2>
+        <p>Roteiros estruturados de alta retenção seguindo o Blueprint de Wallace Leite.</p>
       </div>
     </div>
 
@@ -558,375 +1044,59 @@ Sem termos técnicos. Tom [leve e motivador].
     </div>
 
     <div class="quote-block">
-      <p>"38 de 58 alunos citaram criação de conteúdo como a principal dor do negócio. Este Agent resolve isso."</p>
+      <p>"Roteiros com ganchos fortes nos primeiros 3 segundos retêm até 70% mais visualizações. Use os loops internos para prender a atenção do início ao fim."</p>
     </div>
 
-    <div class="prompts-grid">
-      <!-- Agent Copywriter Completo -->
-      <div class="prompt-card" style="grid-column: 1 / -1;">
+    <div class="prompts-grid single">
+      <div class="prompt-card">
         <div class="prompt-card-header">
-          <div class="prompt-icon">✍️</div>
+          <div class="prompt-icon">🎬</div>
           <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 2.1</div>
-            <h3>Prompt do Agent Copywriting (Persona Completa)</h3>
-            <p>Gere o prompt do sistema para configurar o Claude/ChatGPT como o Agent Copywriter da S-LAB.</p>
+            <div class="prompt-tag">Agent Reels</div>
+            <h3>Gerador de Roteiro Reels Viral</h3>
+            <p>Gere o prompt para criar roteiros virais e hooks magnéticos para seu perfil de saúde.</p>
           </div>
         </div>
         <div class="prompt-card-body">
           <div class="step-badge">Passo 1: Preencher Dados</div>
           <div class="form-group">
             <label class="form-label">Especialidade / Nicho</label>
-            <input type="text" class="form-input" id="copy-especialidade" placeholder="Ex: nutricionista esportiva, cardiologista pediátrico" />
+            <input type="text" class="form-input" id="reels-especialidade" placeholder="Ex: nutricionista clínica, terapeuta familiar" />
           </div>
           <div class="form-group">
-            <label class="form-label">Público-alvo e Dor principal</label>
-            <input type="text" class="form-input" id="copy-publico" placeholder="Ex: mulheres 30–45 anos que querem emagrecer sem radicalismos" />
+            <label class="form-label">Público-Alvo</label>
+            <input type="text" class="form-input" id="reels-publico" placeholder="Ex: mães ocupadas 30-45 anos que sofrem de exaustão" />
           </div>
           <div class="form-group">
-            <label class="form-label">Tom de voz (adjetivos)</label>
-            <input type="text" class="form-input" id="copy-tom" placeholder="Ex: acolhedor, profissional, motivador" />
+            <label class="form-label">Principal Dor do Público</label>
+            <input type="text" class="form-input" id="reels-dor" placeholder="Ex: não ter tempo para preparar refeições saudáveis e comer mal por ansiedade" />
           </div>
           <div class="form-group">
-            <label class="form-label">Palavras ou abordagens a evitar (opcional)</label>
-            <input type="text" class="form-input" id="copy-evitar" placeholder="Ex: jargões técnicos, falar de emagrecimento rápido" />
+            <label class="form-label">Principal Desejo do Público</label>
+            <input type="text" class="form-input" id="reels-desejo" placeholder="Ex: ter energia para o dia a dia e se sentir bem com o próprio corpo" />
           </div>
-          <button class="generate-btn" onclick="generateCopyAgent()">
-            <span class="spinner" id="copy-agent-spin"></span>
-            <span id="copy-agent-btn-text">Gerar prompt do Agent Copywriter →</span>
+          <div class="form-group">
+            <label class="form-label">Serviço / Oferta a ser vendida</label>
+            <input type="text" class="form-input" id="reels-oferta" placeholder="Ex: guia gratuito de lanches rápidos / consulta de avaliação online" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tom de Voz Desejado</label>
+            <input type="text" class="form-input" id="reels-tom" placeholder="Ex: Leve e descontraído, acolhedor, assertivo" value="Leve e descontraído" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tema do Conteúdo (Reels)</label>
+            <input type="text" class="form-input" id="reels-tema" placeholder="Ex: Como se alimentar bem mesmo sem tempo para cozinhar" />
+          </div>
+          <button class="generate-btn" onclick="generateReels()">
+            <span class="spinner" id="reels-spin"></span>
+            <span id="reels-btn-text">Gerar prompt do Roteiro Reels →</span>
           </button>
-          <div class="output-area" id="copy-agent-output">
+          <div class="output-area" id="reels-output">
             <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt do Agent Copywriter</span>
-              <button class="copy-btn" onclick="copyOutput('copy-agent-result', this)">Copiar Prompt</button>
+              <span class="output-header-title">Passo 2: Prompt Reels Virais</span>
+              <button class="copy-btn" onclick="copyOutput('reels-result', this)">Copiar Prompt</button>
             </div>
-            <textarea readonly class="output-text" id="copy-agent-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PAS -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🎯</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 2.2 · Audiência fria · Instagram</div>
-            <h3>PAS — Problema · Agitação · Solução</h3>
-            <p>Vai direto na dor. Audiência fria responde melhor a dor do que a promessa.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Especialidade</label>
-            <input type="text" class="form-input" id="pas-especialidade" placeholder="Ex: nutricionista esportiva" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público-alvo</label>
-            <input type="text" class="form-input" id="pas-publico" placeholder="Ex: homens 25–40 anos que treinam mas não têm resultado" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tom</label>
-            <select class="form-select" id="pas-tom">
-              <option>empático</option>
-              <option>direto</option>
-              <option>motivador</option>
-              <option>provocativo</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tema / dor específica</label>
-            <input type="text" class="form-input" id="pas-tema" placeholder="Ex: não conseguir perder gordura mesmo comendo pouco" />
-          </div>
-          <button class="generate-btn" onclick="generatePAS()">
-            <span class="spinner" id="pas-spin"></span>
-            <span id="pas-btn-text">Gerar post PAS →</span>
-          </button>
-          <div class="output-area" id="pas-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Estruturado PAS</span>
-              <button class="copy-btn" onclick="copyOutput('pas-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="pas-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BAB -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">✨</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 2.3 · Audiência morna · Instagram</div>
-            <h3>BAB — Before · After · Bridge</h3>
-            <p>Venda a vida, não o produto. Cenário real → resultado concreto → seu método.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Público</label>
-            <input type="text" class="form-input" id="bab-publico" placeholder="Ex: mães que perderam a autoconfiança após a maternidade" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Situação frustrante atual (Before)</label>
-            <input type="text" class="form-input" id="bab-before" placeholder="Ex: se olha no espelho e não se reconhece" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Resultado de vida desejado (After)</label>
-            <input type="text" class="form-input" id="bab-after" placeholder="Ex: acorda disposta, se veste com prazer, está presente com os filhos" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Seu método (Bridge)</label>
-            <input type="text" class="form-input" id="bab-bridge" placeholder="Ex: protocolo de 21 dias com ajustes progressivos" />
-          </div>
-          <button class="generate-btn" onclick="generateBAB()">
-            <span class="spinner" id="bab-spin"></span>
-            <span id="bab-btn-text">Gerar post BAB →</span>
-          </button>
-          <div class="output-area" id="bab-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Estruturado BAB</span>
-              <button class="copy-btn" onclick="copyOutput('bab-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="bab-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AIDA -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🔥</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 2.4 · Audiência quente · Oferta direta</div>
-            <h3>AIDA — Atenção · Interesse · Desejo · Ação</h3>
-            <p>Para quando o público já te conhece e está pronto para agir.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">O que está comunicando / oferta</label>
-            <input type="text" class="form-input" id="aida-oferta" placeholder="Ex: abertura de consulta online de avaliação postural" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público</label>
-            <input type="text" class="form-input" id="aida-publico" placeholder="Ex: atletas amadores com dor crônica" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Principal benefício</label>
-            <input type="text" class="form-input" id="aida-beneficio" placeholder="Ex: identifica a causa da dor em 45 minutos" />
-          </div>
-          <button class="generate-btn" onclick="generateAIDA()">
-            <span class="spinner" id="aida-spin"></span>
-            <span id="aida-btn-text">Gerar post AIDA →</span>
-          </button>
-          <div class="output-area" id="aida-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Estruturado AIDA</span>
-              <button class="copy-btn" onclick="copyOutput('aida-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="aida-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gancho -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">⚓</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 2.5 · Abertura</div>
-            <h3>Ganchos que param o scroll</h3>
-            <p>A primeira linha decide se o algoritmo distribui ou enterra seu post.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Nicho / especialidade</label>
-            <input type="text" class="form-input" id="gancho-nicho" placeholder="Ex: dermatologista estética" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tema do post</label>
-            <input type="text" class="form-input" id="gancho-tema" placeholder="Ex: erros na rotina de skincare que envelhecem a pele" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tipo de gancho</label>
-            <select class="form-select" id="gancho-tipo">
-              <option>dado + consequência</option>
-              <option>pergunta direta provocativa</option>
-              <option>afirmação polêmica</option>
-              <option>erro comum do nicho</option>
-              <option>confissão pessoal</option>
-              <option>variado (gere 5 opções)</option>
-            </select>
-          </div>
-          <button class="generate-btn" onclick="generateGancho()">
-            <span class="spinner" id="gancho-spin"></span>
-            <span id="gancho-btn-text">Gerar ganchos →</span>
-          </button>
-          <div class="output-area" id="gancho-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Ganchos</span>
-              <button class="copy-btn" onclick="copyOutput('gancho-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="gancho-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════ CALENDÁRIO ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-calendario">
-    <div class="agent-header">
-      <div class="agent-number">03</div>
-      <div class="agent-info">
-        <h2>Calendário de Conteúdo</h2>
-        <p>Consistência bate frequência — 3x por semana consistente supera 7x irregular.</p>
-      </div>
-    </div>
-
-    <!-- Workflow Steps Grid -->
-    <div class="steps-workflow">
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">1</div>
-        <div class="step-workflow-icon">✏️</div>
-        <div class="step-workflow-title">Preencha seus Dados</div>
-        <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e posicionamento.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">2</div>
-        <div class="step-workflow-icon">📋</div>
-        <div class="step-workflow-title">Copie o Prompt</div>
-        <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto. Clique em Copiar.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">3</div>
-        <div class="step-workflow-icon">🤖</div>
-        <div class="step-workflow-title">Cole na sua IA</div>
-        <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o prompt como primeira mensagem.</div>
-      </div>
-    </div>
-
-    <div class="framework-card" style="margin-bottom:32px;">
-      <div class="section-eyebrow" style="color:var(--orange-300);">Os 4 Pilares</div>
-      <h2 style="font-size:32px;margin-bottom:24px;">Distribuição ideal</h2>
-      <div class="pctfr-grid" style="grid-template-columns:repeat(4,1fr);">
-        <div class="pctfr-item">
-          <div class="pctfr-letter" style="font-size:28px;">40%</div>
-          <div class="pctfr-name">Educação</div>
-          <div class="pctfr-desc">Ensina algo prático do nicho. Gera salvamentos e compartilhamentos.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter" style="font-size:28px;">25%</div>
-          <div class="pctfr-name">Autoridade</div>
-          <div class="pctfr-desc">Cases, resultados, metodologia. Transforma seguidor em paciente.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter" style="font-size:28px;">25%</div>
-          <div class="pctfr-name">Conexão</div>
-          <div class="pctfr-desc">Bastidores, rotina, opinião pessoal. Humaniza a marca.</div>
-        </div>
-        <div class="pctfr-item">
-          <div class="pctfr-letter" style="font-size:28px;">10%</div>
-          <div class="pctfr-name">Conversão</div>
-          <div class="pctfr-desc">CTA direto para consulta ou serviço. Pouco, mas cirúrgico.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="prompts-grid single">
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📅</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 3.1</div>
-            <h3>Calendário de 30 Posts</h3>
-            <p>Um mês de conteúdo estratégico em uma sessão. Tabela com tema, formato e gancho.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Especialidade</label>
-            <input type="text" class="form-input" id="cal-especialidade" placeholder="Ex: fisioterapeuta especialista em dor crônica" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público-alvo e Dor Principal</label>
-            <input type="text" class="form-input" id="cal-publico" placeholder="Ex: adultos 35–55 anos com dor nas costas por trabalho sedentário" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Formatos Desejados</label>
-            <input type="text" class="form-input" id="cal-formatos" placeholder="Ex: carrossel, reels, estático, stories" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Foco / Destaque do Mês</label>
-            <input type="text" class="form-input" id="cal-foco" placeholder="Ex: agendamento de check-up postural anual, vendas da mentoria" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Temas ou Abordagens a Evitar (opcional)</label>
-            <input type="text" class="form-input" id="cal-evitar" placeholder="Ex: falar de cirurgia, termos médicos complexos" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Nº de posts</label>
-            <select class="form-select" id="cal-num">
-              <option value="15">15 posts (2 semanas)</option>
-              <option value="20">20 posts</option>
-              <option value="30" selected>30 posts (1 mês)</option>
-            </select>
-          </div>
-          <button class="generate-btn" onclick="generateCalendario()">
-            <span class="spinner" id="cal-spin"></span>
-            <span id="cal-btn-text">Gerar calendário editorial →</span>
-          </button>
-          <div class="output-area" id="cal-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Calendário Editorial</span>
-              <button class="copy-btn" onclick="copyOutput('cal-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="cal-result"></textarea>
+            <textarea readonly class="output-text" id="reels-result"></textarea>
             <div class="output-footer">
               <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
               <div class="ia-links">
@@ -951,590 +1121,677 @@ Sem termos técnicos. Tom [leve e motivador].
       </div>
     </div>
 
-    <!-- Workflow Steps Grid -->
-    <div class="steps-workflow">
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">1</div>
-        <div class="step-workflow-icon">✏️</div>
-        <div class="step-workflow-title">Preencha seus Dados</div>
-        <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e posicionamento.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">2</div>
-        <div class="step-workflow-icon">📋</div>
-        <div class="step-workflow-title">Copie o Prompt</div>
-        <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto. Clique em Copiar.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">3</div>
-        <div class="step-workflow-icon">🤖</div>
-        <div class="step-workflow-title">Cole na sua IA</div>
-        <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o prompt como primeira mensagem.</div>
-      </div>
-    </div>
-
-    <div class="prompts-grid">
-      <!-- Framework 6 elementos -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🖼️</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 4.1</div>
-            <h3>Prompt de Imagem (DALL-E / Ideogram)</h3>
-            <p>6 elementos. Sujeito · Estilo · Iluminação · Composição · Paleta · Exclusões.</p>
-          </div>
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
         </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Sujeito (o que está na imagem)</label>
-            <input type="text" class="form-input" id="img-sujeito" placeholder="Ex: mãos segurando um bowl de açaí com frutas frescas" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Estilo visual</label>
-            <select class="form-select" id="img-estilo">
-              <option>fotografia lifestyle</option>
-              <option>flat lay editorial</option>
-              <option>fotografia de alimentos profissional</option>
-              <option>retrato documental</option>
-              <option>ilustração clean e vetorial</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Iluminação</label>
-            <select class="form-select" id="img-iluminacao">
-              <option>soft natural light from left, warm tone</option>
-              <option>luz difusa de janela, tom frio</option>
-              <option>luz de estúdio, sombras suaves</option>
-              <option>luz natural overhead, shadows zero</option>
-              <option>rim light sutil, fundo escuro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Composição</label>
-            <select class="form-select" id="img-composicao">
-              <option>overhead (de cima)</option>
-              <option>close-up</option>
-              <option>plano médio</option>
-              <option>rule of thirds, plano aberto</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Paleta (3 cores)</label>
-            <input type="text" class="form-input" id="img-paleta" placeholder="Ex: white, sage green, warm orange" />
-          </div>
-          <button class="generate-btn" onclick="generatePromptImagem()">
-            <span class="spinner" id="img-spin"></span>
-            <span id="img-btn-text">Gerar prompt de imagem →</span>
-          </button>
-          <div class="output-area" id="img-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt de Imagem Personalizado</span>
-              <button class="copy-btn" onclick="copyOutput('img-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="img-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="prompts-grid">
+        <!-- Framework 6 elementos -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🖼️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 4.1</div>
+              <h3>Prompt de Imagem (DALL-E / Ideogram)</h3>
+              <p>6 elementos. Sujeito · Estilo · Iluminação · Composição · Paleta · Exclusões.</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Carrossel 7 slides -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📱</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 4.2</div>
-            <h3>Carrossel de 7 Slides</h3>
-            <p>Gancho → Valor real por slide → Resumo → CTA. Estrutura que gera salvamento.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Especialidade</label>
-            <input type="text" class="form-input" id="car-especialidade" placeholder="Ex: nutricionista funcional" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tema do carrossel</label>
-            <input type="text" class="form-input" id="car-tema" placeholder="Ex: 5 lanches que aceleram o metabolismo" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público</label>
-            <input type="text" class="form-input" id="car-publico" placeholder="Ex: mulheres que trabalham e querem emagrecer sem dieta restritiva" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">CTA do último slide</label>
-            <input type="text" class="form-input" id="car-cta" placeholder="Ex: salve para não esquecer / agende sua consulta" />
-          </div>
-          <button class="generate-btn" onclick="generateCarrossel()">
-            <span class="spinner" id="car-spin"></span>
-            <span id="car-btn-text">Gerar carrossel →</span>
-          </button>
-          <div class="output-area" id="car-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Carrossel Personalizado</span>
-              <button class="copy-btn" onclick="copyOutput('car-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="car-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Estrutura visual referência -->
-      <div class="prompt-card" style="grid-column: 1 / -1;">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📐</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Referência</div>
-            <h3>Estrutura dos 7 Slides</h3>
-            <p>Função de cada slide e o que não pode faltar em nenhum.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <table class="data-table">
-            <thead><tr><th>Slide</th><th>Função</th><th>Regra</th></tr></thead>
-            <tbody>
-              <tr><td><strong>01</strong></td><td>Gancho visual</td><td>Cliffhanger — máx. 8 palavras. Promete o que vem.</td></tr>
-              <tr><td><strong>02–05</strong></td><td>1 ideia por slide</td><td>Headline 6 palavras + 2 linhas. Valor real por slide.</td></tr>
-              <tr><td><strong>06</strong></td><td>Resumo ou Bônus</td><td>Síntese ou dica exclusiva. Motivo para salvar.</td></tr>
-              <tr><td><strong>07</strong></td><td>CTA direto</td><td>1 ação — salvar / comentar / agendar. Nunca dois CTAs.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════ SLIDES ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-slides">
-    <div class="agent-header">
-      <div class="agent-number">05</div>
-      <div class="agent-info">
-        <h2>Slides e Apresentações</h2>
-        <p>De ideia a apresentação profissional em menos de 3 minutos. Gamma.app + ChatGPT.</p>
-      </div>
-    </div>
-
-    <!-- Workflow Steps Grid -->
-    <div class="steps-workflow">
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">1</div>
-        <div class="step-workflow-icon">✏️</div>
-        <div class="step-workflow-title">Preencha seus Dados</div>
-        <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e posicionamento.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">2</div>
-        <div class="step-workflow-icon">📋</div>
-        <div class="step-workflow-title">Copie o Prompt</div>
-        <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto. Clique em Copiar.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">3</div>
-        <div class="step-workflow-icon">🤖</div>
-        <div class="step-workflow-title">Cole na sua IA</div>
-        <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o prompt como primeira mensagem.</div>
-      </div>
-    </div>
-
-    <div class="quote-block">
-      <p>Regra dos 3: cada slide tem apenas 1 título + 1 ideia + 1 visual. Nunca dois conceitos no mesmo slide.</p>
-    </div>
-
-    <div class="prompts-grid">
-      <!-- Roteiro Geral -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🎤</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 5.1</div>
-            <h3>Roteiro de Apresentação</h3>
-            <p>Pronto para colar no Gamma.app e gerar design automático em segundos.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Tema</label>
-            <input type="text" class="form-input" id="sl-tema" placeholder="Ex: como a alimentação afeta o sono" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público</label>
-            <input type="text" class="form-input" id="sl-publico" placeholder="Ex: pacientes adultos em consulta" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Nº de slides</label>
-            <select class="form-select" id="sl-num">
-              <option>8</option><option>10</option><option selected>12</option><option>15</option><option>20</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Uso</label>
-            <select class="form-select" id="sl-uso">
-              <option>consulta</option><option>palestra</option><option>aula</option><option>proposta</option>
-            </select>
-          </div>
-          <button class="generate-btn" onclick="generateSlides()">
-            <span class="spinner" id="sl-spin"></span>
-            <span id="sl-btn-text">Gerar roteiro →</span>
-          </button>
-          <div class="output-area" id="sl-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Roteiro Personalizado</span>
-              <button class="copy-btn" onclick="copyOutput('sl-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="sl-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proposta -->
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">💼</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Prompt 5.2</div>
-            <h3>Proposta de Serviço</h3>
-            <p>Problema → Como você resolve → Prova social → CTA para reunião.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Serviço oferecido</label>
-            <input type="text" class="form-input" id="pr-servico" placeholder="Ex: acompanhamento nutricional online 3 meses" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Perfil do cliente</label>
-            <input type="text" class="form-input" id="pr-cliente" placeholder="Ex: empreendedora 30–45 anos, sem tempo, quer resultado real" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Nº de slides</label>
-            <select class="form-select" id="pr-num">
-              <option>6</option><option selected>8</option><option>10</option>
-            </select>
-          </div>
-          <button class="generate-btn" onclick="generateProposta()">
-            <span class="spinner" id="pr-spin"></span>
-            <span id="pr-btn-text">Gerar proposta →</span>
-          </button>
-          <div class="output-area" id="pr-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Proposta Personalizada</span>
-              <button class="copy-btn" onclick="copyOutput('pr-result', this)">Copiar Prompt</button>
-            </div>
-            <textarea readonly class="output-text" id="pr-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gamma instructions -->
-      <div class="prompt-card" style="grid-column: 1 / -1;">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">⚡️</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Ferramenta</div>
-            <h3>Como usar no Gamma.app</h3>
-            <p>Do roteiro ao design completo em menos de 60 segundos.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <table class="data-table">
-            <thead><tr><th>#</th><th>Passo</th></tr></thead>
-            <tbody>
-              <tr><td><strong>1</strong></td><td>Gere o roteiro acima com o Agent 5</td></tr>
-              <tr><td><strong>2</strong></td><td>Abra <strong>gamma.app</strong> → clique em <strong>New</strong> → <strong>Import</strong></td></tr>
-              <tr><td><strong>3</strong></td><td>Cole o roteiro completo no campo de texto</td></tr>
-              <tr><td><strong>4</strong></td><td>Escolha tema de cores → clique em <strong>Generate</strong></td></tr>
-              <tr><td><strong>5</strong></td><td>Ajuste e exporte em PDF ou apresente pelo link</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════ IMAGEM PESSOAL (ROSTOIA) ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-imagempessoal">
-    <div class="agent-header">
-      <div class="agent-number">06</div>
-      <div class="agent-info">
-        <h2>Imagem Pessoal (RostoIA)</h2>
-        <p>Retratos profissionais e posts com lettering baseados no seu rosto e DNA visual.</p>
-      </div>
-    </div>
-
-    <!-- Workflow Steps Grid -->
-    <div class="steps-workflow">
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">1</div>
-        <div class="step-workflow-icon">✏️</div>
-        <div class="step-workflow-title">Preencha seus Dados</div>
-        <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e posicionamento.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">2</div>
-        <div class="step-workflow-icon">📋</div>
-        <div class="step-workflow-title">Copie o Prompt</div>
-        <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto. Clique em Copiar.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">3</div>
-        <div class="step-workflow-icon">🤖</div>
-        <div class="step-workflow-title">Cole na sua IA</div>
-        <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o prompt como primeira mensagem.</div>
-      </div>
-    </div>
-
-    <div class="quote-block">
-      <p>O DALL-E mantém traços gerais (tom de pele, cabelo, formato do rosto, biotipo) — não é reprodução exata. Use prompts ultra-específicos para obter a máxima semelhança.</p>
-    </div>
-
-    <div class="prompts-grid">
-      <!-- RostoIA Saúde Generator -->
-      <div class="prompt-card" style="grid-column: 1 / -1;">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">📸</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent 6</div>
-            <h3>Gerador RostoIA Saúde</h3>
-            <p>Preencha os dados da sua aparência, escolha o tipo de imagem desejada e gere o prompt DALL-E correspondente.</p>
-          </div>
-        </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <h3 style="font-size:16px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">1. Características Físicas</h3>
-          
-          <div class="form-group">
-            <label class="form-label">Gênero e Faixa Etária</label>
-            <input type="text" class="form-input" id="rp-genero" placeholder="Ex: Mulher de 35 anos / Homem de 40 anos" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tom de Pele e Subtom</label>
-            <input type="text" class="form-input" id="rp-pele" placeholder="Ex: Pele clara com subtom quente / Pele negra escura com subtom frio" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Formato do Rosto</label>
-            <input type="text" class="form-input" id="rp-rosto" placeholder="Ex: Rosto oval / Rosto quadrado com maxilar marcado" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Olhos (Cor e Formato)</label>
-            <input type="text" class="form-input" id="rp-olhos" placeholder="Ex: Olhos castanhos amendoados / Olhos verdes marcantes" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Sobrancelhas (Espessura, Arco e Cor)</label>
-            <input type="text" class="form-input" id="rp-sobrancelhas" placeholder="Ex: Sobrancelhas grossas arqueadas e pretas" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Cabelo (Comprimento, Cor, Textura e Estilo)</label>
-            <input type="text" class="form-input" id="rp-cabelo" placeholder="Ex: Cabelo curto chanel liso castanho escuro / Cabelo médio cacheado ruivo" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Biotipo & Traços Marcantes (Opcional)</label>
-            <input type="text" class="form-input" id="rp-biotipo" placeholder="Ex: Biotipo magro, usa óculos de grau redondos pretos, sorriso com covinhas" />
-          </div>
-
-          <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">2. DNA Visual da Marca</h3>
-          
-          <div class="form-group">
-            <label class="form-label">Estilo Visual & Cores</label>
-            <input type="text" class="form-input" id="rp-dna-estilo" placeholder="Ex: Fotografia lifestyle editorial, paleta verde oliva e beige neutro" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Iluminação e Elementos Recorrentes</label>
-            <input type="text" class="form-input" id="rp-dna-luz" placeholder="Ex: Luz natural suave de janela, consultório médico moderno e plantas de fundo" />
-          </div>
-
-          <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">3. Configuração da Imagem</h3>
-          
-          <div class="form-group">
-            <label class="form-label">Tipo de Produto</label>
-            <select class="form-select" id="rp-tipo-produto" onchange="toggleRostoIAType()">
-              <option value="portfolio">Portfólio Profissional (Retrato realista sem texto)</option>
-              <option value="post">Post com Lettering (Composição com área para texto)</option>
-            </select>
-          </div>
-
-          <!-- Fields specific to PORTFOLIO -->
-          <div id="rp-group-portfolio">
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
             <div class="form-group">
-              <label class="form-label">Contexto (Ambiente)</label>
-              <select class="form-select" id="rp-port-contexto">
-                <option value="consultorio">Consultório / Clínica</option>
-                <option value="externo">Externo / Lifestyle</option>
-                <option value="estudio">Estúdio Neutro</option>
-                <option value="cafe">Café Moderno</option>
-                <option value="urbano">Urbano</option>
+              <label class="form-label">Sujeito (o que está na imagem)</label>
+              <input type="text" class="form-input" id="img-sujeito"
+                placeholder="Ex: mãos segurando um bowl de açaí com frutas frescas" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Estilo visual</label>
+              <select class="form-select" id="img-estilo">
+                <option>fotografia lifestyle</option>
+                <option>flat lay editorial</option>
+                <option>fotografia de alimentos profissional</option>
+                <option>retrato documental</option>
+                <option>ilustração clean e vetorial</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Enquadramento</label>
-              <select class="form-select" id="rp-port-enquadramento">
-                <option value="rosto">Close-up (Rosto)</option>
-                <option value="meio-corpo" selected>Plano Médio (Meio corpo)</option>
-                <option value="corpo-inteiro">Plano Inteiro (Corpo inteiro)</option>
+              <label class="form-label">Iluminação</label>
+              <select class="form-select" id="img-iluminacao">
+                <option>soft natural light from left, warm tone</option>
+                <option>luz difusa de janela, tom frio</option>
+                <option>luz de estúdio, sombras suaves</option>
+                <option>luz natural overhead, shadows zero</option>
+                <option>rim light sutil, fundo escuro</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Expressão e Ação</label>
-              <input type="text" class="form-input" id="rp-port-expressao" placeholder="Ex: Olhando para a câmera sorrindo / segurando um tablet e conversando" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Vestimenta (Roupa)</label>
-              <input type="text" class="form-input" id="rp-port-roupa" placeholder="Ex: Jaleco branco por cima de camisa social / Roupa casual chique" />
-            </div>
-          </div>
-
-          <!-- Fields specific to POST WITH LETTERING -->
-          <div id="rp-group-post" style="display:none;">
-            <div class="form-group">
-              <label class="form-label">Tema ou Mensagem</label>
-              <input type="text" class="form-input" id="rp-post-tema" placeholder="Ex: Dica rápida sobre saúde / Frase motivacional de segunda-feira" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Posição da Área de Texto Limpa (Placeholder)</label>
-              <select class="form-select" id="rp-post-posicao">
-                <option value="lado-direito">Lado Direito</option>
-                <option value="lado-esquerdo">Lado Esquerdo</option>
-                <option value="inferior">Parte Inferior</option>
-                <option value="topo">Parte Superior</option>
-                <option value="centro-desfocado">Centro Desfocado</option>
+              <label class="form-label">Composição</label>
+              <select class="form-select" id="img-composicao">
+                <option>overhead (de cima)</option>
+                <option>close-up</option>
+                <option>plano médio</option>
+                <option>rule of thirds, plano aberto</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Expressão e Ação</label>
-              <input type="text" class="form-input" id="rp-post-expressao" placeholder="Ex: Apontando para o lado do texto com expressão confiante" />
+              <label class="form-label">Paleta (3 cores)</label>
+              <input type="text" class="form-input" id="img-paleta" placeholder="Ex: white, sage green, warm orange" />
             </div>
-            <div class="form-group">
-              <label class="form-label">Vestimenta (Roupa)</label>
-              <input type="text" class="form-input" id="rp-post-roupa" placeholder="Ex: Jaleco médico / Roupa profissional elegante" />
+            <button class="generate-btn" onclick="generatePromptImagem()">
+              <span class="spinner" id="img-spin"></span>
+              <span id="img-btn-text">Gerar prompt de imagem →</span>
+            </button>
+            <div class="output-area" id="img-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt de Imagem Personalizado</span>
+                <button class="copy-btn" onclick="copyOutput('img-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="img-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <button class="generate-btn" onclick="generateImagemPessoal()">
-            <span>Gerar prompt RostoIA →</span>
-          </button>
-
-          <div class="output-area" id="rp-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt DALL-E RostoIA</span>
-              <button class="copy-btn" onclick="copyOutput('rp-result', this)">Copiar Prompt</button>
+        <!-- Carrossel 7 slides -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📱</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 4.2</div>
+              <h3>Carrossel de 7 Slides</h3>
+              <p>Gancho → Valor real por slide → Resumo → CTA. Estrutura que gera salvamento.</p>
             </div>
-            <textarea readonly class="output-text" id="rp-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA de imagens favorita</span>
-              <div class="ia-links">
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT (DALL-E)</a>
-                <a href="https://ideogram.ai" target="_blank" class="ia-link ideogram">Abrir Ideogram</a>
-                <a href="https://midjourney.com" target="_blank" class="ia-link midjourney">Abrir Midjourney</a>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade</label>
+              <input type="text" class="form-input" id="car-especialidade" placeholder="Ex: nutricionista funcional" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tema do carrossel</label>
+              <input type="text" class="form-input" id="car-tema"
+                placeholder="Ex: 5 lanches que aceleram o metabolismo" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público</label>
+              <input type="text" class="form-input" id="car-publico"
+                placeholder="Ex: mulheres que trabalham e querem emagrecer sem dieta restritiva" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">CTA do último slide</label>
+              <input type="text" class="form-input" id="car-cta"
+                placeholder="Ex: salve para não esquecer / agende sua consulta" />
+            </div>
+            <button class="generate-btn" onclick="generateCarrossel()">
+              <span class="spinner" id="car-spin"></span>
+              <span id="car-btn-text">Gerar carrossel →</span>
+            </button>
+            <div class="output-area" id="car-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Carrossel Personalizado</span>
+                <button class="copy-btn" onclick="copyOutput('car-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="car-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estrutura visual referência -->
+        <div class="prompt-card" style="grid-column: 1 / -1;">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📐</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Referência</div>
+              <h3>Estrutura dos 7 Slides</h3>
+              <p>Função de cada slide e o que não pode faltar em nenhum.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Slide</th>
+                  <th>Função</th>
+                  <th>Regra</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>01</strong></td>
+                  <td>Gancho visual</td>
+                  <td>Cliffhanger — máx. 8 palavras. Promete o que vem.</td>
+                </tr>
+                <tr>
+                  <td><strong>02–05</strong></td>
+                  <td>1 ideia por slide</td>
+                  <td>Headline 6 palavras + 2 linhas. Valor real por slide.</td>
+                </tr>
+                <tr>
+                  <td><strong>06</strong></td>
+                  <td>Resumo ou Bônus</td>
+                  <td>Síntese ou dica exclusiva. Motivo para salvar.</td>
+                </tr>
+                <tr>
+                  <td><strong>07</strong></td>
+                  <td>CTA direto</td>
+                  <td>1 ação — salvar / comentar / agendar. Nunca dois CTAs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ SLIDES ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-slides">
+      <div class="agent-header">
+        <div class="agent-number">05</div>
+        <div class="agent-info">
+          <h2>Slides e Apresentações</h2>
+          <p>De ideia a apresentação profissional em menos de 3 minutos. Gamma.app + ChatGPT.</p>
+        </div>
+      </div>
+
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>Regra dos 3: cada slide tem apenas 1 título + 1 ideia + 1 visual. Nunca dois conceitos no mesmo slide.</p>
+      </div>
+
+      <div class="prompts-grid">
+        <!-- Roteiro Geral -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎤</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 5.1</div>
+              <h3>Roteiro de Apresentação</h3>
+              <p>Pronto para colar no Gamma.app e gerar design automático em segundos.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Tema</label>
+              <input type="text" class="form-input" id="sl-tema" placeholder="Ex: como a alimentação afeta o sono" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público</label>
+              <input type="text" class="form-input" id="sl-publico" placeholder="Ex: pacientes adultos em consulta" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nº de slides</label>
+              <select class="form-select" id="sl-num">
+                <option>8</option>
+                <option>10</option>
+                <option selected>12</option>
+                <option>15</option>
+                <option>20</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Uso</label>
+              <select class="form-select" id="sl-uso">
+                <option>consulta</option>
+                <option>palestra</option>
+                <option>aula</option>
+                <option>proposta</option>
+              </select>
+            </div>
+            <button class="generate-btn" onclick="generateSlides()">
+              <span class="spinner" id="sl-spin"></span>
+              <span id="sl-btn-text">Gerar roteiro →</span>
+            </button>
+            <div class="output-area" id="sl-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Roteiro Personalizado</span>
+                <button class="copy-btn" onclick="copyOutput('sl-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="sl-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proposta -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">💼</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Prompt 5.2</div>
+              <h3>Proposta de Serviço</h3>
+              <p>Problema → Como você resolve → Prova social → CTA para reunião.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Serviço oferecido</label>
+              <input type="text" class="form-input" id="pr-servico"
+                placeholder="Ex: acompanhamento nutricional online 3 meses" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Perfil do cliente</label>
+              <input type="text" class="form-input" id="pr-cliente"
+                placeholder="Ex: empreendedora 30–45 anos, sem tempo, quer resultado real" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nº de slides</label>
+              <select class="form-select" id="pr-num">
+                <option>6</option>
+                <option selected>8</option>
+                <option>10</option>
+              </select>
+            </div>
+            <button class="generate-btn" onclick="generateProposta()">
+              <span class="spinner" id="pr-spin"></span>
+              <span id="pr-btn-text">Gerar proposta →</span>
+            </button>
+            <div class="output-area" id="pr-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Proposta Personalizada</span>
+                <button class="copy-btn" onclick="copyOutput('pr-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="pr-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gamma instructions -->
+        <div class="prompt-card" style="grid-column: 1 / -1;">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">⚡️</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Ferramenta</div>
+              <h3>Como usar no Gamma.app</h3>
+              <p>Do roteiro ao design completo em menos de 60 segundos.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Passo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>Gere o roteiro acima com o Agent 5</td>
+                </tr>
+                <tr>
+                  <td><strong>2</strong></td>
+                  <td>Abra <strong>gamma.app</strong> → clique em <strong>New</strong> → <strong>Import</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>3</strong></td>
+                  <td>Cole o roteiro completo no campo de texto</td>
+                </tr>
+                <tr>
+                  <td><strong>4</strong></td>
+                  <td>Escolha tema de cores → clique em <strong>Generate</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>5</strong></td>
+                  <td>Ajuste e exporte em PDF ou apresente pelo link</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ IMAGEM PESSOAL (ROSTOIA) ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-imagempessoal">
+      <div class="agent-header">
+        <div class="agent-number">06</div>
+        <div class="agent-info">
+          <h2>Imagem Pessoal (RostoIA)</h2>
+          <p>Retratos profissionais e posts com lettering baseados no seu rosto e DNA visual.</p>
+        </div>
+      </div>
+
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>O DALL-E mantém traços gerais (tom de pele, cabelo, formato do rosto, biotipo) — não é reprodução exata. Use
+          prompts ultra-específicos para obter a máxima semelhança.</p>
+      </div>
+
+      <div class="prompts-grid">
+        <!-- RostoIA Saúde Generator -->
+        <div class="prompt-card" style="grid-column: 1 / -1;">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">📸</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 6</div>
+              <h3>Gerador RostoIA Saúde</h3>
+              <p>Preencha os dados da sua aparência, escolha o tipo de imagem desejada e gere o prompt DALL-E
+                correspondente.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <h3 style="font-size:16px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">1.
+              Características Físicas</h3>
+
+            <div class="form-group">
+              <label class="form-label">Gênero e Faixa Etária</label>
+              <input type="text" class="form-input" id="rp-genero"
+                placeholder="Ex: Mulher de 35 anos / Homem de 40 anos" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tom de Pele e Subtom</label>
+              <input type="text" class="form-input" id="rp-pele"
+                placeholder="Ex: Pele clara com subtom quente / Pele negra escura com subtom frio" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Formato do Rosto</label>
+              <input type="text" class="form-input" id="rp-rosto"
+                placeholder="Ex: Rosto oval / Rosto quadrado com maxilar marcado" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Olhos (Cor e Formato)</label>
+              <input type="text" class="form-input" id="rp-olhos"
+                placeholder="Ex: Olhos castanhos amendoados / Olhos verdes marcantes" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sobrancelhas (Espessura, Arco e Cor)</label>
+              <input type="text" class="form-input" id="rp-sobrancelhas"
+                placeholder="Ex: Sobrancelhas grossas arqueadas e pretas" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cabelo (Comprimento, Cor, Textura e Estilo)</label>
+              <input type="text" class="form-input" id="rp-cabelo"
+                placeholder="Ex: Cabelo curto chanel liso castanho escuro / Cabelo médio cacheado ruivo" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Biotipo & Traços Marcantes (Opcional)</label>
+              <input type="text" class="form-input" id="rp-biotipo"
+                placeholder="Ex: Biotipo magro, usa óculos de grau redondos pretos, sorriso com covinhas" />
+            </div>
+
+            <h3
+              style="font-size:16px; margin-top:28px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">
+              2. DNA Visual da Marca</h3>
+
+            <div class="form-group">
+              <label class="form-label">Estilo Visual & Cores</label>
+              <input type="text" class="form-input" id="rp-dna-estilo"
+                placeholder="Ex: Fotografia lifestyle editorial, paleta verde oliva e beige neutro" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Iluminação e Elementos Recorrentes</label>
+              <input type="text" class="form-input" id="rp-dna-luz"
+                placeholder="Ex: Luz natural suave de janela, consultório médico moderno e plantas de fundo" />
+            </div>
+
+            <h3
+              style="font-size:16px; margin-top:28px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">
+              3. Configuração da Imagem</h3>
+
+            <div class="form-group">
+              <label class="form-label">Tipo de Produto</label>
+              <select class="form-select" id="rp-tipo-produto" onchange="toggleRostoIAType()">
+                <option value="portfolio">Portfólio Profissional (Retrato realista sem texto)</option>
+                <option value="post">Post com Lettering (Composição com área para texto)</option>
+              </select>
+            </div>
+
+            <!-- Fields specific to PORTFOLIO -->
+            <div id="rp-group-portfolio">
+              <div class="form-group">
+                <label class="form-label">Contexto (Ambiente)</label>
+                <select class="form-select" id="rp-port-contexto">
+                  <option value="consultorio">Consultório / Clínica</option>
+                  <option value="externo">Externo / Lifestyle</option>
+                  <option value="estudio">Estúdio Neutro</option>
+                  <option value="cafe">Café Moderno</option>
+                  <option value="urbano">Urbano</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Enquadramento</label>
+                <select class="form-select" id="rp-port-enquadramento">
+                  <option value="rosto">Close-up (Rosto)</option>
+                  <option value="meio-corpo" selected>Plano Médio (Meio corpo)</option>
+                  <option value="corpo-inteiro">Plano Inteiro (Corpo inteiro)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Expressão e Ação</label>
+                <input type="text" class="form-input" id="rp-port-expressao"
+                  placeholder="Ex: Olhando para a câmera sorrindo / segurando um tablet e conversando" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Vestimenta (Roupa)</label>
+                <input type="text" class="form-input" id="rp-port-roupa"
+                  placeholder="Ex: Jaleco branco por cima de camisa social / Roupa casual chique" />
+              </div>
+            </div>
+
+            <!-- Fields specific to POST WITH LETTERING -->
+            <div id="rp-group-post" style="display:none;">
+              <div class="form-group">
+                <label class="form-label">Tema ou Mensagem</label>
+                <input type="text" class="form-input" id="rp-post-tema"
+                  placeholder="Ex: Dica rápida sobre saúde / Frase motivacional de segunda-feira" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Posição da Área de Texto Limpa (Placeholder)</label>
+                <select class="form-select" id="rp-post-posicao">
+                  <option value="lado-direito">Lado Direito</option>
+                  <option value="lado-esquerdo">Lado Esquerdo</option>
+                  <option value="inferior">Parte Inferior</option>
+                  <option value="topo">Parte Superior</option>
+                  <option value="centro-desfocado">Centro Desfocado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Expressão e Ação</label>
+                <input type="text" class="form-input" id="rp-post-expressao"
+                  placeholder="Ex: Apontando para o lado do texto com expressão confiante" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Vestimenta (Roupa)</label>
+                <input type="text" class="form-input" id="rp-post-roupa"
+                  placeholder="Ex: Jaleco médico / Roupa profissional elegante" />
+              </div>
+            </div>
+
+            <button class="generate-btn" onclick="generateImagemPessoal()">
+              <span>Gerar prompt RostoIA →</span>
+            </button>
+
+            <div class="output-area" id="rp-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt DALL-E RostoIA</span>
+                <button class="copy-btn" onclick="copyOutput('rp-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="rp-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA de imagens favorita</span>
+                <div class="ia-links">
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT (DALL-E)</a>
+                  <a href="https://ideogram.ai" target="_blank" class="ia-link ideogram">Abrir Ideogram</a>
+                  <a href="https://midjourney.com" target="_blank" class="ia-link midjourney">Abrir Midjourney</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-</main>
+  </main>
 
-<footer>
-  <div class="footer-logo">
-    <img src="images/logo-white.png" alt="S-LAB Logo">
-  </div>
-  <div class="footer-sub">S-LAB · Laboratório de Desenvolvimento Profissional em Saúde · 2026</div>
-</footer>
+  <footer>
+    <div class="footer-logo">
+      <img src="images/logo-white.png" alt="S-LAB Logo">
+    </div>
+    <div class="footer-sub">S-LAB · Laboratório de Desenvolvimento Profissional em Saúde · 2026</div>
+  </footer>
 
-<script>
+  <script>
 
-// ── NAVIGATION ───────────────────────────────────────────────────
-function showTab(tabName) {
-  document.querySelectorAll('.tab-page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tab-' + tabName)?.classList.add('active');
-  document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
-  if (tabName !== 'home') {
-    document.getElementById('heroSection').style.display = 'none';
-    document.querySelector('.stats-strip').style.display = 'none';
-  } else {
-    document.getElementById('heroSection').style.display = 'grid';
-    document.querySelector('.stats-strip').style.display = 'block';
-  }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+    // ── NAVIGATION ───────────────────────────────────────────────────
+    function showTab(tabName) {
+      document.querySelectorAll('.tab-page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-' + tabName)?.classList.add('active');
+      document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
+      if (tabName !== 'home') {
+        document.getElementById('heroSection').style.display = 'none';
+        document.querySelector('.stats-strip').style.display = 'none';
+      } else {
+        document.getElementById('heroSection').style.display = 'grid';
+        document.querySelector('.stats-strip').style.display = 'block';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-document.querySelectorAll('.nav-tab').forEach(tab => {
-  tab.addEventListener('click', () => showTab(tab.dataset.tab));
-});
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => showTab(tab.dataset.tab));
+    });
 
-function copyOutput(resultId, btnEl) {
-  const el = document.getElementById(resultId);
-  const text = el.tagName === 'TEXTAREA' ? el.value : el.textContent;
-  const originalText = btnEl.textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    btnEl.textContent = '✓ Copiado!';
-    btnEl.classList.add('copied');
-    setTimeout(() => { 
-      btnEl.textContent = originalText; 
-      btnEl.classList.remove('copied'); 
-    }, 2000);
-  });
-}
+    function copyOutput(resultId, btnEl) {
+      const el = document.getElementById(resultId);
+      const text = el.tagName === 'TEXTAREA' ? el.value : el.textContent;
+      const originalText = btnEl.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btnEl.textContent = '✓ Copiado!';
+        btnEl.classList.add('copied');
+        setTimeout(() => {
+          btnEl.textContent = originalText;
+          btnEl.classList.remove('copied');
+        }, 2000);
+      });
+    }
 
-function showGeneratedPrompt(text, outputId, resultId) {
-  const output = document.getElementById(outputId);
-  const result = document.getElementById(resultId);
-  if (output && result) {
-    result.value = text;
-    output.classList.add('visible');
-    output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-}
+    function showGeneratedPrompt(text, outputId, resultId) {
+      const output = document.getElementById(outputId);
+      const result = document.getElementById(resultId);
+      if (output && result) {
+        result.value = text;
+        output.classList.add('visible');
+        output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
 
-function toggleRostoIAType() {
-  const val = document.getElementById('rp-tipo-produto').value;
-  if (val === 'portfolio') {
-    document.getElementById('rp-group-portfolio').style.display = 'block';
-    document.getElementById('rp-group-post').style.display = 'none';
-  } else {
-    document.getElementById('rp-group-portfolio').style.display = 'none';
-    document.getElementById('rp-group-post').style.display = 'block';
-  }
-}
+    function toggleRostoIAType() {
+      const val = document.getElementById('rp-tipo-produto').value;
+      if (val === 'portfolio') {
+        document.getElementById('rp-group-portfolio').style.display = 'block';
+        document.getElementById('rp-group-post').style.display = 'none';
+      } else {
+        document.getElementById('rp-group-portfolio').style.display = 'none';
+        document.getElementById('rp-group-post').style.display = 'block';
+      }
+    }
 
-// ── PROMPT TEMPLATES (LOCAL) ───────────────────────────────────────
-const AGENT_TEMPLATES = {
-  idvisual: `Você é a Skill de ID Visual, designer especialista em identidade visual para profissionais da área de saúde. Você cria sistemas visuais completos e coerentes — não apenas escolha de cores, mas um conjunto de decisões que comunica autoridade, confiança e personalidade antes de qualquer palavra.
+    // ── PROMPT TEMPLATES (LOCAL) ───────────────────────────────────────
+    const AGENT_TEMPLATES = {
+      idvisual: `Você é a Skill de ID Visual, designer especialista em identidade visual para profissionais da área de saúde. Você cria sistemas visuais completos e coerentes — não apenas escolha de cores, mas um conjunto de decisões que comunica autoridade, confiança e personalidade antes de qualquer palavra.
 Você pensa como designer sênior e estrategista de marca ao mesmo tempo.
 
 ---
@@ -1639,7 +1896,7 @@ Sempre finalize com:
 Em seguida, sem esperar o usuário pedir, gere automaticamente o banner de prévia com o seguinte prompt no DALL-E:
 "Brand identity preview board for a [ESPECIALIDADE] professional. Clean flat lay composition on [COR NEUTRA 1] background. Top section: large bold typography showcase using [FONTE DISPLAY], color swatches in a horizontal row — [COR PRIMÁRIA], [COR SECUNDÁRIA], [NEUTRA 1], [NEUTRA 2], [ACENTO] — each as a rounded square with hex code label beneath in [FONTE TEXTO]. Middle section: the brand elements — [ELEMENTO RECORRENTE 1], [ELEMENTO RECORRENTE 2] and [ELEMENTO DE NICHO] displayed as isolated icons with ample white space between them. Bottom section: a mock Instagram post card using the full identity — [COR PRIMÁRIA] accent bar on left, [FONTE DISPLAY] headline in [COR PRIMÁRIA], body text in [COR NEUTRA 2], [ELEMENTO DE NICHO] as decoration. Overall mood: [ADJETIVO 1], [ADJETIVO 2], [ADJETIVO 3]. Professional brand identity board, no photography, vector style, ultra clean, no text overlapping, generous white space. 16:9 horizontal format."`,
 
-  copyAgent: `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de qualquer área. Você domina os frameworks PAS, BAB e AIDA e sabe escolher o mais adequado para cada situação.
+      copyAgent: `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de qualquer área. Você domina os frameworks PAS, BAB e AIDA e sabe escolher o mais adequado para cada situação.
 Você escreve como um copywriter sênior que entende de psicologia do consumidor e comportamento de audiências no Instagram em 2026.
 
 ---
@@ -1686,7 +1943,7 @@ Para cada post entregue, use SEMPRE este formato:
 6. Tom humano, não corporativo. Escreva como um ser humano enviando mensagem.
 7. Sem jargão técnico, salvo quando o usuário pedir especificamente.`,
 
-  calendario: `Você é uma skill de Calendário de Conteúdo, estrategista de conteúdo para Instagram de profissionais da área de saúde. Você transforma informações do negócio em calendários editoriais completos, prontos para executar.
+      calendario: `Você é uma skill de Calendário de Conteúdo, estrategista de conteúdo para Instagram de profissionais da área de saúde. Você transforma informações do negócio em calendários editoriais completos, prontos para executar.
 Você pensa como um estrategista de marketing — não apenas lista posts, mas distribui pilares com inteligência, varia formatos e garante que educação, autoridade, conexão e conversão apareçam no ritmo certo.
 
 ---
@@ -1735,7 +1992,7 @@ Sempre finalize com esta mensagem exata:
 - **Ajustar o calendário** → diga 'Troca os posts de conexão por algo mais leve'
 - **Exportar para texto** → diga 'Exporta o calendário em lista'"`,
 
-  carrossel: `Você é o AgentSkill Design de Posts, especialista em criação de carrosseis e imagens para Instagram de profissionais para qualquer área.
+      carrossel: `Você é o AgentSkill Design de Posts, especialista em criação de carrosseis e imagens para Instagram de profissionais para qualquer área.
 Seu objetivo é criar o texto estruturado de cada slide e o prompt de imagem otimizado para gerar no DALL-E.
 
 Sua tarefa é criar o roteiro completo de um carrossel de 7 slides para:
@@ -1792,7 +2049,7 @@ Use esse DNA em todos os prompts de imagem desta série.
 4. Exclusões sempre presentes: "No text, no watermarks, no plastic-looking skin, no oversaturated colors, no artificial background".
 5. Máximo 12 palavras de texto por slide. No final, dê instruções de uso dos prompts no ChatGPT.`,
 
-  apresentacao: `Você é o AgentSkill - Apresentações, especialista em criar apresentações visuais completas diretamente no ChatGPT usando o DALL-E. Você gera cada slide como uma imagem pronta — com layout, tipografia, cores e conteúdo — sem depender de nenhuma ferramenta externa.
+      apresentacao: `Você é o AgentSkill - Apresentações, especialista em criar apresentações visuais completas diretamente no ChatGPT usando o DALL-E. Você gera cada slide como uma imagem pronta — com layout, tipografia, cores e conteúdo — sem depender de nenhuma ferramenta externa.
 Você aplica a Regra dos 3 em todo slide: 1 título, 1 ideia, 1 visual. Máximo 3 bullets por slide.
 
 Sua tarefa é criar o roteiro detalhado de uma apresentação otimizado para colar no Gamma.app.
@@ -1816,19 +2073,133 @@ Siga a estrutura por slide no output:
 Siga as diretrizes de quantidade e estrutura de slides para o objetivo "[USO]":
 - Capa (Slide 1) + Introdução do Problema (Slide 2) + Desenvolvimento de 1 ideia por slide + Conclusão/Próximos Passos (Último slide)
 - Se palestra: inclua slide de estatística ou dado no Slide 3 e erro comum no Slide 5.
-- Se proposta: use a estrutura Capa -> Problema -> Método de Solução -> Prova Social -> Escopo -> CTA.`
-};
+- Se proposta: use a estrutura Capa -> Problema -> Método de Solução -> Prova Social -> Escopo -> CTA.`,
 
-// ── GENERATORS ───────────────────────────────────────────────────
+      reels: `Atue como um estrategista de conteúdo especializado em Reels.
 
-function generatePCTFR() {
-  const p = document.getElementById('pctfr-papel').value;
-  const c = document.getElementById('pctfr-contexto').value;
-  const t = document.getElementById('pctfr-tarefa').value;
-  const f = document.getElementById('pctfr-formato').value;
-  const r = document.getElementById('pctfr-restricoes').value;
-  
-  const outputText = `[P - PAPEL]
+Sua tarefa é criar roteiros de Reels com alto potencial de retenção, alcance e conversão, seguindo o Blueprint de Roteiros Virais criado por Wallace Leite — Estrategista Digital (@owallaceleite).
+
+CONTEÚDO E CONTEXTO DO PROFISSIONAL:
+- Nicho / especialidade: [ESPECIALIDADE]
+- Público-alvo (perfil demográfico e psicográfico): [PÚBLICO-ALVO]
+- Principal dor do público: [DOR]
+- Principal desejo do público: [DESEJO]
+- Tipo de serviço/oferta vendida: [OFERTA]
+
+Tom de voz desejado: [TOM]
+Tema do conteúdo: [TEMA]
+
+ESTRUTURA OBRIGATÓRIA DOS ROTEIROS
+
+Cada roteiro deve seguir esta estrutura de 5 fases:
+
+[0–3s] FASE 1 — A BOMBA (Hook)
+Declaração forte, pergunta de resultado ou revelação de erro. Sem introdução, sem "oi pessoal", sem aquecimento. A primeira palavra já é a isca.
+
+[3–8s] FASE 2 — A PROVA DA PROMESSA (Amplificação)
+Amplifique o hook com um detalhe específico: situação real, número concreto, comportamento que a pessoa reconhece.
+
+[8–45s] FASE 3 — O TUTORIAL ACELERADO (Corpo)
+Passo a passo denso, direto e aplicável. Use verbos de ação. Nomeie o erro, mostre o ajuste, dê uma microação prática. Inclua pelo menos um loop interno ("Mas aqui vem o detalhe que quase ninguém percebe...").
+
+[45–55s] FASE 4 — O RESULTADO VISUAL
+Mostre ou descreva o resultado. Pode ser exemplo prático, comparação, checklist, antes/depois de processo.
+
+[55–60s] FASE 5 — CTA TRIPLO
+1. Isca de palavra-chave: "Comenta '[PALAVRA]' que eu te mando [ENTREGA] pelo Direct."
+2. Promessa de continuidade: "Se você quer [BENEFÍCIO], me segue aqui."
+3. Assinatura verbal: frase curta que cria identidade.
+
+OS 7 TIPOS DE HOOK DISPONÍVEIS
+
+Use OBRIGATORIAMENTE hooks destes 7 tipos:
+
+1. FAÇANHA PESSOAL: "Eu acabei de [AÇÃO/RESULTADO] e vou te mostrar como funciona."
+2. SENTENÇA DE MORTE: "[CRENÇA/HÁBITO] acabou. O que funciona de verdade é [NOVA VISÃO]."
+3. COMANDO PROVOCADOR: "Para de [AÇÃO COMUM] se você quer [RESULTADO]."
+4. PERGUNTA DE RESULTADO: "Como [RESULTADO] sem [DOR/OBSTÁCULO]?"
+5. LISTA URGENTE: "[NÚMERO] [sinais/erros/ajustes] que você precisa saber sobre [TEMA]."
+6. REVELAÇÃO DE ERRO: "Se você está [AÇÃO COMUM], talvez esteja [CONSEQUÊNCIA] sem perceber."
+7. BREAKING NEWS: "Todo mundo está falando de [TREND], mas [ALERTA/DETALHE IGNORADO]."
+
+REGRAS DE RETENÇÃO
+
+- Abra um loop de curiosidade nos primeiros 3 segundos.
+- Plante pelo menos um loop interno no meio do roteiro.
+- Use microcomprometimento: verbos como "olha", "percebe", "confere", "compara", "ajusta".
+- Gere identificação emocional sem culpar a pessoa.
+- Frases úteis para loops internos:
+  - "Mas aqui vem o detalhe que quase ninguém percebe..."
+  - "O pulo do gato está aqui..."
+  - "E é nessa parte que muita gente erra..."
+  - "Agora presta atenção nesse ponto..."
+
+REGRAS DE LINGUAGEM
+
+- Linguagem clara, humana e direta.
+- Sem jargão técnico não traduzido.
+- Sem promessas milagrosas ou resultados garantidos.
+- Sem frases como "é só fechar a boca", "nunca coma isso", "isso engorda/emagrece", "perca X kg em X dias".
+- Use as expressões do público real sempre que possível.
+
+REGRAS DE ÉTICA
+
+- Não prescreva condutas individualizadas sem avaliação.
+- Não prometa cura.
+- Não ataque outros profissionais.
+- Não generalize condições médicas.
+- Respeite o contexto do público.
+
+ENTREGA ESPERADA
+
+0. Antes de qualquer roteiro, faça um resumo curto (3-6 bullets) consolidando o nicho, público, dor, desejo e oferta com base nos dados fornecidos.
+1. 10 opções de hooks usando diferentes tipos (identifique o tipo de cada um).
+2. 3 roteiros completos de até 60 segundos, cada um com:
+  - Tipo de hook usado
+  - Objetivo do Reel: Alcance, Conversão ou Autoridade
+  - Roteiro completo dividido nas 5 fases com marcação de tempo
+  - Palavra-chave de CTA
+  - Sugestão de prova visual (o que mostrar na tela)
+  - Sugestão de legenda curta para o post
+  - Sugestão de primeira mensagem no Direct após o comentário
+3. Os 3 roteiros devem ter objetivos diferentes:
+  - 1 roteiro focado em ALCANCE (quebra de crença, tema amplo)
+  - 1 roteiro focado em CONVERSÃO (dor específica, CTA forte para Direct)
+  - 1 roteiro focado em AUTORIDADE (método, sistema, bastidor)
+4. O conteúdo deve fazer a pessoa pensar: "Isso é comigo. Talvez eu precise de ajuda profissional."
+
+CHECKLIST DE VALIDAÇÃO (aplique antes de entregar)
+
+Hook:
+- Hook está na primeira frase?
+- Não existe saudação antes do hook?
+- Hook activa dor, curiosidade, desejo ou quebra de crença?
+- Hook pertence a um dos 7 tipos?
+
+Corpo:
+- Explicação é simples?
+- Existe exemplo concreto?
+- Existe loop interno antes da metade?
+- Pessoa consegue aplicar pelo menos um primeiro passo?
+
+CTA:
+- CTA tem palavra-chave?
+- Palavra-chave combina com o tema?
+- CTA abre conversa no Direct?
+
+Por favor, gere os 10 hooks e os 3 roteiros completos baseando-se nos dados preenchidos acima.`
+    };
+
+    // ── GENERATORS ───────────────────────────────────────────────────
+
+    function generatePCTFR() {
+      const p = document.getElementById('pctfr-papel').value;
+      const c = document.getElementById('pctfr-contexto').value;
+      const t = document.getElementById('pctfr-tarefa').value;
+      const f = document.getElementById('pctfr-formato').value;
+      const r = document.getElementById('pctfr-restricoes').value;
+
+      const outputText = `[P - PAPEL]
 ${p}
 
 [C - CONTEXTO]
@@ -1842,32 +2213,32 @@ ${f}
 
 [R - RESTRIÇÕES]
 ${r}`;
-  
-  showGeneratedPrompt(outputText, 'pctfr-output', 'pctfr-result');
-}
 
-function generateIdentidade() {
-  const esp = document.getElementById('iv-especialidade').value;
-  const pub = document.getElementById('iv-publico').value;
-  const adj = document.getElementById('iv-adjetivos').value;
-  const ref = document.getElementById('iv-referencia').value;
-  const evitar = document.getElementById('iv-evitar').value;
-  
-  let template = AGENT_TEMPLATES.idvisual;
-  template = template.replace('[ESPECIALIDADE]', esp)
-                     .replace('[PÚBLICO-ALVO]', pub)
-                     .replace('[ADJETIVOS]', adj)
-                     .replace('[REFERENCIA]', ref ? ref : 'Nenhuma referência enviada')
-                     .replace('[EVITAR]', evitar ? evitar : 'Nenhum estilo a evitar');
-                     
-  showGeneratedPrompt(template, 'iv-output', 'iv-result');
-}
+      showGeneratedPrompt(outputText, 'pctfr-output', 'pctfr-result');
+    }
 
-function generatePaleta() {
-  const esp = document.getElementById('pt-especialidade').value;
-  const adj = document.getElementById('pt-adjetivos').value;
-  
-  const outputText = `Você é designer especialista em branding e identidade visual para profissionais de saúde e bem-estar.
+    function generateIdentidade() {
+      const esp = document.getElementById('iv-especialidade').value;
+      const pub = document.getElementById('iv-publico').value;
+      const adj = document.getElementById('iv-adjetivos').value;
+      const ref = document.getElementById('iv-referencia').value;
+      const evitar = document.getElementById('iv-evitar').value;
+
+      let template = AGENT_TEMPLATES.idvisual;
+      template = template.replace('[ESPECIALIDADE]', esp)
+        .replace('[PÚBLICO-ALVO]', pub)
+        .replace('[ADJETIVOS]', adj)
+        .replace('[REFERENCIA]', ref ? ref : 'Nenhuma referência enviada')
+        .replace('[EVITAR]', evitar ? evitar : 'Nenhum estilo a evitar');
+
+      showGeneratedPrompt(template, 'iv-output', 'iv-result');
+    }
+
+    function generatePaleta() {
+      const esp = document.getElementById('pt-especialidade').value;
+      const adj = document.getElementById('pt-adjetivos').value;
+
+      const outputText = `Você é designer especialista em branding e identidade visual para profissionais de saúde e bem-estar.
 Sua tarefa é criar a paleta de cores e a tipografia recomendada para:
 • Especialidade: ${esp}
 • Perfil/Adjetivos da marca: ${adj}
@@ -1890,17 +2261,17 @@ Gere um bloco de variáveis CSS (:root) com as cores estruturadas.
 
 Seja direto e específico.`;
 
-  showGeneratedPrompt(outputText, 'pt-output', 'pt-result');
-}
+      showGeneratedPrompt(outputText, 'pt-output', 'pt-result');
+    }
 
-function generateDNA() {
-  const estilo = document.getElementById('dna-estilo').value;
-  const cores = document.getElementById('dna-cores').value;
-  const ilum = document.getElementById('dna-iluminacao').value;
-  const comp = document.getElementById('dna-composicao').value;
-  const elem = document.getElementById('dna-elementos').value;
-  
-  const outputText = `Estilo visual: ${estilo}.
+    function generateDNA() {
+      const estilo = document.getElementById('dna-estilo').value;
+      const cores = document.getElementById('dna-cores').value;
+      const ilum = document.getElementById('dna-iluminacao').value;
+      const comp = document.getElementById('dna-composicao').value;
+      const elem = document.getElementById('dna-elementos').value;
+
+      const outputText = `Estilo visual: ${estilo}.
 Paleta: ${cores} — tons correspondentes.
 Iluminação: ${ilum}.
 Composição: ${comp}.
@@ -1920,31 +2291,31 @@ Exclusões: no text, no watermarks, no plastic-looking skin, no artificial backg
 3. Para Elemento Abstrato:
 "Abstract artistic composition representing health and wellness. Incorporating organic shapes, elements of ${elem}, soft textures. Palette: ${cores}. ${ilum}, clean vector-like photographic style. No text, no watermarks, square 1:1 format."`;
 
-  showGeneratedPrompt(outputText, 'dna-output', 'dna-result');
-}
+      showGeneratedPrompt(outputText, 'dna-output', 'dna-result');
+    }
 
-function generateCopyAgent() {
-  const esp = document.getElementById('copy-especialidade').value;
-  const pub = document.getElementById('copy-publico').value;
-  const tom = document.getElementById('copy-tom').value;
-  const evitar = document.getElementById('copy-evitar').value;
-  
-  let template = AGENT_TEMPLATES.copyAgent;
-  template = template.replace('[ESPECIALIDADE]', esp)
-                     .replace('[PÚBLICO-ALVO]', pub)
-                     .replace('[TOM]', tom)
-                     .replace('[EVITAR]', evitar ? evitar : 'Sem palavras específicas a evitar');
-                     
-  showGeneratedPrompt(template, 'copy-agent-output', 'copy-agent-result');
-}
+    function generateCopyAgent() {
+      const esp = document.getElementById('copy-especialidade').value;
+      const pub = document.getElementById('copy-publico').value;
+      const tom = document.getElementById('copy-tom').value;
+      const evitar = document.getElementById('copy-evitar').value;
 
-function generatePAS() {
-  const esp = document.getElementById('pas-especialidade').value;
-  const pub = document.getElementById('pas-publico').value;
-  const tom = document.getElementById('pas-tom').value;
-  const tema = document.getElementById('pas-tema').value;
-  
-  const outputText = `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de saúde e bem-estar.
+      let template = AGENT_TEMPLATES.copyAgent;
+      template = template.replace('[ESPECIALIDADE]', esp)
+        .replace('[PÚBLICO-ALVO]', pub)
+        .replace('[TOM]', tom)
+        .replace('[EVITAR]', evitar ? evitar : 'Sem palavras específicas a evitar');
+
+      showGeneratedPrompt(template, 'copy-agent-output', 'copy-agent-result');
+    }
+
+    function generatePAS() {
+      const esp = document.getElementById('pas-especialidade').value;
+      const pub = document.getElementById('pas-publico').value;
+      const tom = document.getElementById('pas-tom').value;
+      const tema = document.getElementById('pas-tema').value;
+
+      const outputText = `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de saúde e bem-estar.
 Sua tarefa é escrever um post de alto impacto usando o framework PAS (Problema -> Agitação -> Solução) com base nos seguintes dados:
 
 • Especialidade/Nicho: ${esp}
@@ -1981,17 +2352,17 @@ Abaixo estão as definições específicas do framework PAS:
 **PROBLEMA:** 1-2 linhas nomeando a dor específica. Sem introdução. Vai direto.
 **AGITAÇÃO:** 2-3 linhas aprofundando as consequências de não resolver.
 **SOLUÇÃO:** 2-3 linhas apresentando a saída + CTA claro ao final.`;
-  
-  showGeneratedPrompt(outputText, 'pas-output', 'pas-result');
-}
 
-function generateBAB() {
-  const pub = document.getElementById('bab-publico').value;
-  const before = document.getElementById('bab-before').value;
-  const after = document.getElementById('bab-after').value;
-  const bridge = document.getElementById('bab-bridge').value;
-  
-  const outputText = `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de saúde e bem-estar.
+      showGeneratedPrompt(outputText, 'pas-output', 'pas-result');
+    }
+
+    function generateBAB() {
+      const pub = document.getElementById('bab-publico').value;
+      const before = document.getElementById('bab-before').value;
+      const after = document.getElementById('bab-after').value;
+      const bridge = document.getElementById('bab-bridge').value;
+
+      const outputText = `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de saúde e bem-estar.
 Sua tarefa é escrever um post de alto impacto usando o framework BAB (Before -> After -> Bridge) com base nos seguintes dados:
 
 • Público-alvo: ${pub}
@@ -2029,16 +2400,16 @@ Abaixo estão as definições específicas do framework BAB:
 **BEFORE:** 1-2 linhas descrevendo a situação frustrante atual.
 **AFTER:** 2-3 linhas pintando o resultado de vida desejado com cenas concretas.
 **BRIDGE:** 2-3 linhas mostrando o caminho entre os dois + CTA.`;
-  
-  showGeneratedPrompt(outputText, 'bab-output', 'bab-result');
-}
 
-function generateAIDA() {
-  const oferta = document.getElementById('aida-oferta').value;
-  const pub = document.getElementById('aida-publico').value;
-  const ben = document.getElementById('aida-beneficio').value;
-  
-  const outputText = `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de saúde e bem-estar.
+      showGeneratedPrompt(outputText, 'bab-output', 'bab-result');
+    }
+
+    function generateAIDA() {
+      const oferta = document.getElementById('aida-oferta').value;
+      const pub = document.getElementById('aida-publico').value;
+      const ben = document.getElementById('aida-beneficio').value;
+
+      const outputText = `Você é Copy-Posts, assistente especialista em copywriting para Instagram de profissionais de saúde e bem-estar.
 Sua tarefa é escrever um post de alto impacto usando o framework AIDA (Atenção -> Interesse -> Desejo -> Ação) com base nos seguintes dados:
 
 • Oferta/Comunicação: ${oferta}
@@ -2075,16 +2446,16 @@ Abaixo estão as definições específicas do framework AIDA:
 **INTERESSE:** 2 linhas mostrando por que isso é relevante para o público.
 **DESEJO:** 2 linhas ativando o desejo com benefício concreto ou prova.
 **AÇÃO:** 1 CTA direto e específico.`;
-  
-  showGeneratedPrompt(outputText, 'aida-output', 'aida-result');
-}
 
-function generateGancho() {
-  const nicho = document.getElementById('gancho-nicho').value;
-  const tema = document.getElementById('gancho-tema').value;
-  const tipo = document.getElementById('gancho-tipo').value;
-  
-  const outputText = `Você é especialista em copywriting para Instagram, expert em primeiras linhas que param o scroll.
+      showGeneratedPrompt(outputText, 'aida-output', 'aida-result');
+    }
+
+    function generateGancho() {
+      const nicho = document.getElementById('gancho-nicho').value;
+      const tema = document.getElementById('gancho-tema').value;
+      const tipo = document.getElementById('gancho-tipo').value;
+
+      const outputText = `Você é especialista em copywriting para Instagram, expert em primeiras linhas que param o scroll.
 Sua tarefa é criar ganchos de abertura para o seguinte tema:
 
 • Nicho/Especialidade: ${nicho}
@@ -2098,95 +2469,95 @@ Regras absolutas (NUNCA QUEBRE):
 - Máx. 12 palavras por gancho.
 - Cada um deve criar curiosidade imediata ou dor reconhecível.
 - Numere cada gancho e explique em 1 linha por que funciona.`;
-  
-  showGeneratedPrompt(outputText, 'gancho-output', 'gancho-result');
-}
 
-function generateCalendario() {
-  const esp = document.getElementById('cal-especialidade').value;
-  const pub = document.getElementById('cal-publico').value;
-  const formatos = document.getElementById('cal-formatos').value;
-  const num = document.getElementById('cal-num').value;
-  const foco = document.getElementById('cal-foco').value;
-  const evitar = document.getElementById('cal-evitar').value;
-  
-  let template = AGENT_TEMPLATES.calendario;
-  template = template.replace('[ESPECIALIDADE]', esp)
-                     .replace('[PÚBLICO-ALVO]', pub)
-                     .replace('[NUMERO]', num)
-                     .replace('[FORMATOS]', formatos)
-                     .replace('[FOCO]', foco)
-                     .replace('[EVITAR]', evitar ? evitar : 'Nenhum tema específico a evitar');
-                     
-  showGeneratedPrompt(template, 'cal-output', 'cal-result');
-}
+      showGeneratedPrompt(outputText, 'gancho-output', 'gancho-result');
+    }
 
-function generatePromptImagem() {
-  const suj = document.getElementById('img-sujeito').value;
-  const est = document.getElementById('img-estilo').value;
-  const ilum = document.getElementById('img-iluminacao').value;
-  const comp = document.getElementById('img-composicao').value;
-  const pal = document.getElementById('img-paleta').value;
-  
-  const styleMap = {
-    'fotografia lifestyle': 'lifestyle photography',
-    'flat lay editorial': 'editorial flat lay photography',
-    'fotografia de alimentos profissional': 'professional food photography',
-    'retrato documental': 'documentary portrait photography',
-    'ilustração clean e vetorial': 'clean vector illustration'
-  };
-  
-  const compMap = {
-    'overhead (de cima)': 'overhead view',
-    'close-up': 'close-up shot',
-    'plano médio': 'medium shot',
-    'rule of thirds, plano aberto': 'rule of thirds, wide shot'
-  };
-  
-  const mappedStyle = styleMap[est] || est;
-  const mappedComp = compMap[comp] || comp;
-  
-  const promptText = `${mappedComp} of ${suj}, styled in ${mappedStyle}. Lighting: ${ilum}. Color palette: ${pal}. Clean and minimalist background. High-resolution camera feel, natural textures. Exclusões: no text, no watermarks, no plastic-looking skin, no artificial background, no oversaturated colors. Square 1:1 format.`;
-  
-  showGeneratedPrompt(promptText, 'img-output', 'img-result');
-}
+    function generateCalendario() {
+      const esp = document.getElementById('cal-especialidade').value;
+      const pub = document.getElementById('cal-publico').value;
+      const formatos = document.getElementById('cal-formatos').value;
+      const num = document.getElementById('cal-num').value;
+      const foco = document.getElementById('cal-foco').value;
+      const evitar = document.getElementById('cal-evitar').value;
 
-function generateCarrossel() {
-  const esp = document.getElementById('car-especialidade').value;
-  const tema = document.getElementById('car-tema').value;
-  const pub = document.getElementById('car-publico').value;
-  const cta = document.getElementById('car-cta').value;
-  
-  let template = AGENT_TEMPLATES.carrossel;
-  template = template.replace('[ESPECIALIDADE]', esp)
-                     .replace('[TEMA]', tema)
-                     .replace('[PÚBLICO-ALVO]', pub)
-                     .replace('[CTA]', cta);
-                     
-  showGeneratedPrompt(template, 'car-output', 'car-result');
-}
+      let template = AGENT_TEMPLATES.calendario;
+      template = template.replace('[ESPECIALIDADE]', esp)
+        .replace('[PÚBLICO-ALVO]', pub)
+        .replace('[NUMERO]', num)
+        .replace('[FORMATOS]', formatos)
+        .replace('[FOCO]', foco)
+        .replace('[EVITAR]', evitar ? evitar : 'Nenhum tema específico a evitar');
 
-function generateSlides() {
-  const tema = document.getElementById('sl-tema').value;
-  const pub = document.getElementById('sl-publico').value;
-  const num = document.getElementById('sl-num').value;
-  const uso = document.getElementById('sl-uso').value;
-  
-  let template = AGENT_TEMPLATES.apresentacao;
-  template = template.replace('[TEMA]', tema)
-                     .replace('[PÚBLICO-ALVO]', pub)
-                     .replace('[NUMERO]', num)
-                     .replace('[USO]', uso);
-                     
-  showGeneratedPrompt(template, 'sl-output', 'sl-result');
-}
+      showGeneratedPrompt(template, 'cal-output', 'cal-result');
+    }
 
-function generateProposta() {
-  const serv = document.getElementById('pr-servico').value;
-  const cli = document.getElementById('pr-cliente').value;
-  const num = document.getElementById('pr-num').value;
-  
-  const outputText = `Você é o AgentSkill - Apresentações, especialista em criar apresentações visuais completas diretamente no ChatGPT usando o DALL-E.
+    function generatePromptImagem() {
+      const suj = document.getElementById('img-sujeito').value;
+      const est = document.getElementById('img-estilo').value;
+      const ilum = document.getElementById('img-iluminacao').value;
+      const comp = document.getElementById('img-composicao').value;
+      const pal = document.getElementById('img-paleta').value;
+
+      const styleMap = {
+        'fotografia lifestyle': 'lifestyle photography',
+        'flat lay editorial': 'editorial flat lay photography',
+        'fotografia de alimentos profissional': 'professional food photography',
+        'retrato documental': 'documentary portrait photography',
+        'ilustração clean e vetorial': 'clean vector illustration'
+      };
+
+      const compMap = {
+        'overhead (de cima)': 'overhead view',
+        'close-up': 'close-up shot',
+        'plano médio': 'medium shot',
+        'rule of thirds, plano aberto': 'rule of thirds, wide shot'
+      };
+
+      const mappedStyle = styleMap[est] || est;
+      const mappedComp = compMap[comp] || comp;
+
+      const promptText = `${mappedComp} of ${suj}, styled in ${mappedStyle}. Lighting: ${ilum}. Color palette: ${pal}. Clean and minimalist background. High-resolution camera feel, natural textures. Exclusões: no text, no watermarks, no plastic-looking skin, no artificial background, no oversaturated colors. Square 1:1 format.`;
+
+      showGeneratedPrompt(promptText, 'img-output', 'img-result');
+    }
+
+    function generateCarrossel() {
+      const esp = document.getElementById('car-especialidade').value;
+      const tema = document.getElementById('car-tema').value;
+      const pub = document.getElementById('car-publico').value;
+      const cta = document.getElementById('car-cta').value;
+
+      let template = AGENT_TEMPLATES.carrossel;
+      template = template.replace('[ESPECIALIDADE]', esp)
+        .replace('[TEMA]', tema)
+        .replace('[PÚBLICO-ALVO]', pub)
+        .replace('[CTA]', cta);
+
+      showGeneratedPrompt(template, 'car-output', 'car-result');
+    }
+
+    function generateSlides() {
+      const tema = document.getElementById('sl-tema').value;
+      const pub = document.getElementById('sl-publico').value;
+      const num = document.getElementById('sl-num').value;
+      const uso = document.getElementById('sl-uso').value;
+
+      let template = AGENT_TEMPLATES.apresentacao;
+      template = template.replace('[TEMA]', tema)
+        .replace('[PÚBLICO-ALVO]', pub)
+        .replace('[NUMERO]', num)
+        .replace('[USO]', uso);
+
+      showGeneratedPrompt(template, 'sl-output', 'sl-result');
+    }
+
+    function generateProposta() {
+      const serv = document.getElementById('pr-servico').value;
+      const cli = document.getElementById('pr-cliente').value;
+      const num = document.getElementById('pr-num').value;
+
+      const outputText = `Você é o AgentSkill - Apresentações, especialista em criar apresentações visuais completas diretamente no ChatGPT usando o DALL-E.
 Sua tarefa é criar uma proposta de serviço estruturada com ${num} slides com base nos seguintes dados:
 
 • Serviço oferecido: ${serv}
@@ -2207,70 +2578,70 @@ Para cada slide, forneça:
 - Nota do apresentador (o que falar)
 
 Prepare a proposta em formato otimizado para colar no Gamma.app.`;
-  
-  showGeneratedPrompt(outputText, 'pr-output', 'pr-result');
-}
 
-function generateImagemPessoal() {
-  const genero = document.getElementById('rp-genero').value;
-  const pele = document.getElementById('rp-pele').value;
-  const rosto = document.getElementById('rp-rosto').value;
-  const olhos = document.getElementById('rp-olhos').value;
-  const sobrancelhas = document.getElementById('rp-sobrancelhas').value;
-  const cabelo = document.getElementById('rp-cabelo').value;
-  const biotipo = document.getElementById('rp-biotipo').value;
-  
-  const dnaEstilo = document.getElementById('rp-dna-estilo').value;
-  const dnaLuz = document.getElementById('rp-dna-luz').value;
-  
-  const tipo = document.getElementById('rp-tipo-produto').value;
-  
-  let promptText = '';
-  
-  if (tipo === 'portfolio') {
-    const contexto = document.getElementById('rp-port-contexto').value;
-    const enquadramento = document.getElementById('rp-port-enquadramento').value;
-    const expressao = document.getElementById('rp-port-expressao').value;
-    const roupa = document.getElementById('rp-port-roupa').value;
-    
-    const contextMap = {
-      'consultorio': 'on-location medical setting, soft diffused light, realistic clinical environment',
-      'externo': 'on-location photography, ambient natural light, environment-integrated',
-      'estudio': 'clean studio, controlled soft light, neutral background',
-      'cafe': 'cozy café setting, warm ambient light, depth of field',
-      'urbano': 'urban street setting, soft natural light, city background blur'
-    };
-    
-    const framingMap = {
-      'rosto': 'close-up shot',
-      'meio-corpo': 'medium shot (waist up)',
-      'corpo-inteiro': 'full body shot'
-    };
-    
-    const styleBase = contextMap[contexto] || contexto;
-    const framingText = framingMap[enquadramento] || enquadramento;
-    
-    promptText = \`\${styleBase}, photorealistic portrait, high resolution, shot on camera.
+      showGeneratedPrompt(outputText, 'pr-output', 'pr-result');
+    }
+
+    function generateImagemPessoal() {
+      const genero = document.getElementById('rp-genero').value;
+      const pele = document.getElementById('rp-pele').value;
+      const rosto = document.getElementById('rp-rosto').value;
+      const olhos = document.getElementById('rp-olhos').value;
+      const sobrancelhas = document.getElementById('rp-sobrancelhas').value;
+      const cabelo = document.getElementById('rp-cabelo').value;
+      const biotipo = document.getElementById('rp-biotipo').value;
+
+      const dnaEstilo = document.getElementById('rp-dna-estilo').value;
+      const dnaLuz = document.getElementById('rp-dna-luz').value;
+
+      const tipo = document.getElementById('rp-tipo-produto').value;
+
+      let promptText = '';
+
+      if (tipo === 'portfolio') {
+        const contexto = document.getElementById('rp-port-contexto').value;
+        const enquadramento = document.getElementById('rp-port-enquadramento').value;
+        const expressao = document.getElementById('rp-port-expressao').value;
+        const roupa = document.getElementById('rp-port-roupa').value;
+
+        const contextMap = {
+          'consultorio': 'on-location medical setting, soft diffused light, realistic clinical environment',
+          'externo': 'on-location photography, ambient natural light, environment-integrated',
+          'estudio': 'clean studio, controlled soft light, neutral background',
+          'cafe': 'cozy café setting, warm ambient light, depth of field',
+          'urbano': 'urban street setting, soft natural light, city background blur'
+        };
+
+        const framingMap = {
+          'rosto': 'close-up shot',
+          'meio-corpo': 'medium shot (waist up)',
+          'corpo-inteiro': 'full body shot'
+        };
+
+        const styleBase = contextMap[contexto] || contexto;
+        const framingText = framingMap[enquadramento] || enquadramento;
+
+        promptText = `${styleBase}, photorealistic portrait, high resolution, shot on camera.
 
 SUBJECT — maintain exactly:
-\${genero}. \${pele}. \${rosto}. \${olhos}. \${sobrancelhas}. \${cabelo}. \${biotipo ? biotipo : ''}
-Wearing: \${roupa}.
+${genero}. ${pele}. ${rosto}. ${olhos}. ${sobrancelhas}. ${cabelo}. ${biotipo ? biotipo : ''}
+Wearing: ${roupa}.
 
-EXPRESSION & ACTION: \${expressao}
-FRAMING: \${framingText}
+EXPRESSION & ACTION: ${expressao}
+FRAMING: ${framingText}
 
 ENVIRONMENT & LIGHTING:
-Realistic setting. Lighting: \${dnaLuz}.
+Realistic setting. Lighting: ${dnaLuz}.
 Background: realistic environment, no artificial studio backdrop.
 Camera feel: natural grain, realistic depth, no over-processed skin.
 
-STYLE: \${dnaEstilo} photography. Natural skin texture.
+STYLE: ${dnaEstilo} photography. Natural skin texture.
 
 STRICT RULES:
 Do not alter facial structure, skin tone, eye color, hair color or texture.
 No studio backdrop unless requested. No plastic or over-smoothed skin.
 No text overlays. No watermarks. No unrealistic proportions.
-Square 1:1 format.\`;
+Square 1:1 format.`;
     
   } else {
     const tema = document.getElementById('rp-post-tema').value;
@@ -2288,32 +2659,54 @@ Square 1:1 format.\`;
     
     const posText = posMap[posicao] || posicao;
     
-    promptText = \`Social media post, photorealistic person in branded layout. Square 1:1, Instagram feed.
+    promptText = `Social media post, photorealistic person in branded layout. Square 1:1, Instagram feed.
 
 SUBJECT — maintain exactly:
-\${genero}. \${pele}. \${rosto}. \${olhos}. \${sobrancelhas}. \${cabelo}. \${biotipo ? biotipo : ''}
-Wearing: \${roupa}.
+${genero}. ${pele}. ${rosto}. ${olhos}. ${sobrancelhas}. ${cabelo}. ${biotipo ? biotipo : ''}
+Wearing: ${roupa}.
 
-EXPRESSION & ACTION: \${expressao}
+EXPRESSION & ACTION: ${expressao}
 FRAMING: medium shot (waist up)
 
 COMPOSITION FOR TEXT:
-The \${posText} of the frame must be clean, flat, and uncluttered. Person positioned away from the text area.
+The ${posText} of the frame must be clean, flat, and uncluttered. Person positioned away from the text area.
 No graphic elements or textures in the text zone.
 
 VISUAL IDENTITY:
-Background: \${dnaEstilo}. Elements and Lighting: \${dnaLuz}.
+Background: ${dnaEstilo}. Elements and Lighting: ${dnaLuz}.
 
 TEXT PLACEHOLDER:
-Blank area at the \${posText}, occupying ~30-40% of the frame. Flat, clean, high contrast with subject.
+Blank area at the ${posText}, occupying ~30-40% of the frame. Flat, clean, high contrast with subject.
 
 STRICT RULES:
 Do not write text in the image. Do not alter facial structure, skin tone, eye color, hair or texture.
-No plastic skin. No watermarks. No unrealistic proportions. Square 1:1 format.\`;
+No plastic skin. No watermarks. No unrealistic proportions. Square 1:1 format.`;
   }
   
   showGeneratedPrompt(promptText, 'rp-output', 'rp-result');
 }
-</script>
+
+function generateReels() {
+  const esp = document.getElementById('reels-especialidade').value;
+  const pub = document.getElementById('reels-publico').value;
+  const dor = document.getElementById('reels-dor').value;
+  const desejo = document.getElementById('reels-desejo').value;
+  const oferta = document.getElementById('reels-oferta').value;
+  const tom = document.getElementById('reels-tom').value;
+  const tema = document.getElementById('reels-tema').value;
+
+  let template = AGENT_TEMPLATES.reels;
+  template = template.replace('[ESPECIALIDADE]', esp)
+    .replace('[PÚBLICO-ALVO]', pub)
+    .replace('[DOR]', dor)
+    .replace('[DESEJO]', desejo)
+    .replace('[OFERTA]', oferta)
+    .replace('[TOM]', tom)
+    .replace('[TEMA]', tema);
+
+  showGeneratedPrompt(template, 'reels-output', 'reels-result');
+}
+  </script>
 </body>
+
 </html>
