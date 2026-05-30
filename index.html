@@ -35,19 +35,20 @@
       <li><button class="nav-tab" data-tab="imagempessoal">Imagem Pessoal</button></li>
       <li><button class="nav-tab" data-tab="reels">Reels</button></li>
     </ul>
-    <span class="nav-badge">S-LAB · 2026</span>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="heroSection">
     <div>
       <div class="hero-eyebrow">Laboratório de Desenvolvimento Profissional em Saúde</div>
-      <h1>O futuro da sua marca,<br><span class="grad">potencializado por IA.</span></h1>
-      <p class="hero-sub">Transforme a complexidade da inteligência artificial em autoridade digital, apresentações de
-        impacto e um posicionamento magnético.</p>
+      <h1>Transforme ideias em conteúdo que <br><span class="grad">conecta e converte.</span></h1>
+      <p class="hero-sub">Promtps estratégicos e agentes de IA treinados para acelerar sua produção e posicionar você
+        como referência no mercado.</p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="showTab('framework')">Começar agora →</button>
-        <button class="btn-ghost" onclick="showTab('copy')">Ver prompts de copy</button>
+        <button class="btn-ghost"
+          onclick="showTab('home'); document.getElementById('escolha-agent').scrollIntoView({ behavior: 'smooth' });">Ver
+          agentes de IA</button>
       </div>
     </div>
     <div class="hero-visual">
@@ -64,20 +65,20 @@
   <div class="stats-strip">
     <div class="stats-inner">
       <div class="stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Agents prontos</div>
+        <div class="stat-num">7</div>
+        <div class="stat-label">Agents Prontos</div>
       </div>
       <div class="stat">
-        <div class="stat-num">30+</div>
-        <div class="stat-label">Prompts incluídos</div>
+        <div class="stat-num">10x</div>
+        <div class="stat-label">Mais produtividade</div>
       </div>
       <div class="stat">
-        <div class="stat-num">4min</div>
-        <div class="stat-label">Vs 4 horas antes</div>
+        <div class="stat-num">∞ horas</div>
+        <div class="stat-label">Poucos Minutos com IA</div>
       </div>
       <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Stack gratuita</div>
+        <div class="stat-num">1 click</div>
+        <div class="stat-label">Prompt pronto</div>
       </div>
     </div>
   </div>
@@ -87,7 +88,7 @@
 
     <!-- ═══════════════════════════════ HOME ═══════════════════════════════ -->
     <div class="tab-page active" id="tab-home">
-      <div class="section-head">
+      <div class="section-head" id="escolha-agent">
         <div class="section-eyebrow">Bem-vindo</div>
         <h2>Escolha um <span class="grad">Agent</span></h2>
       </div>
@@ -263,11 +264,11 @@
             </div>
           </div>
           <div class="prompt-card-body">
-            <div class="prompt-raw" style="background:rgba(233,77,29,0.04);border-color:rgba(233,77,29,0.2);">"Me faz
-              um
+            <div class="prompt-raw"
+              style="background:rgba(233,77,29,0.04);border-color:rgba(233,77,29,0.2); white-space: normal;">"Me faz um
               post sobre alimentação saudável"</div>
             <p
-              style="font-size:13px;color:var(--stone);margin-top:12px;font-family:var(--font-display);line-height:1.5;">
+              style="font-size:13px;color:var(--stone);margin-top:12px;font-family:var(--font-display);line-height:1.5;white-space: normal">
               Resultado: post genérico com "alimentação equilibrada" e "hábitos saudáveis". Sem voz, sem conversão.
             </p>
           </div>
@@ -283,22 +284,23 @@
             </div>
           </div>
           <div class="prompt-card-body">
-            <div class="prompt-raw">Você é [NUTRICIONISTA] especialista em [EMAGRECIMENTO].
-              (P) Papel com especialidade e foco definidos.
+            <div class="prompt-raw" style="white-space: normal;">
+              Você é [NUTRICIONISTA] especialista em [EMAGRECIMENTO].<br>
+              (P) Papel com especialidade e foco definidos.<br><br>
 
-              Meu público são mulheres [28–45 anos] que trabalham muito.
-              (C) Contexto: quem vai ler esse conteúdo.
+              Meu público são mulheres [28–45 anos] que trabalham muito.<br>
+              (C) Contexto: quem vai ler esse conteúdo.<br><br>
 
-              Crie um carrossel de [7 slides] sobre lanches para
-              não sentir fome à tarde.
-              (T) Tarefa específica com número definido.
+              Crie um carrossel de [7 slides] sobre lanches para não sentir fome à tarde.<br>
+              (T) Tarefa específica com número definido.<br><br>
 
-              [SLIDE 1]: headline impactante.
-              [SLIDES 2–6]: dica + 2 linhas. [SLIDE 7]: CTA.
-              (F) Formato exato entregue.
+              [SLIDE 1]: headline impactante.<br>
+              [SLIDES 2–6]: dica + 2 linhas. [SLIDE 7]: CTA.<br>
+              (F) Formato exato entregue.<br><br>
 
-              Sem termos técnicos. Tom [leve e motivador].
-              (R) Restrições claras — o que não fazer.</div>
+              Sem termos técnicos. Tom [leve e motivador].<br>
+              (R) Restrições claras — o que não fazer.
+            </div>
           </div>
         </div>
 
@@ -1672,7 +1674,9 @@
     <div class="footer-logo">
       <img src="images/logo-white.png" alt="S-LAB Logo">
     </div>
-    <div class="footer-sub">S-LAB · Academia de Posicionamento e Inteligência em Saúde · 2026</div>
+    <div class="footer-sub">S-LAB · Laboratório de Desenvolvimento Profissional em Saúde</div>
+    <div class="footer-sub"><br> ©2026 · Todos os direitos reservados</div>
+
   </footer>
 
   <script>
