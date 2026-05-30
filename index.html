@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S-LAB — Laboratório de Desenvolvimento Profissional em Saúde</title>
+  <title>S-LAB — Academia de Posicionamento e Inteligência em Saúde</title>
+  <link rel="icon" type="image/png" href="images/logo-color-simbol.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,10 +30,10 @@
       <li><button class="nav-tab" data-tab="identidade">Identidade</button></li>
       <li><button class="nav-tab" data-tab="copy">Copy</button></li>
       <li><button class="nav-tab" data-tab="calendario">Calendário</button></li>
-      <li><button class="nav-tab" data-tab="reels">Reels</button></li>
       <li><button class="nav-tab" data-tab="imagens">Imagens</button></li>
       <li><button class="nav-tab" data-tab="slides">Slides</button></li>
       <li><button class="nav-tab" data-tab="imagempessoal">Imagem Pessoal</button></li>
+      <li><button class="nav-tab" data-tab="reels">Reels</button></li>
     </ul>
     <span class="nav-badge">S-LAB · 2026</span>
   </nav>
@@ -41,9 +42,9 @@
   <section class="hero" id="heroSection">
     <div>
       <div class="hero-eyebrow">Laboratório de Desenvolvimento Profissional em Saúde</div>
-      <h1>Prompts que<br><span class="grad">convertem.</span></h1>
-      <p class="hero-sub">"A IA não vai substituir o profissional — mas o profissional que usa IA vai substituir o que
-        não usa."</p>
+      <h1>O futuro da sua marca,<br><span class="grad">potencializado por IA.</span></h1>
+      <p class="hero-sub">Transforme a complexidade da inteligência artificial em autoridade digital, apresentações de
+        impacto e um posicionamento magnético.</p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="showTab('framework')">Começar agora →</button>
         <button class="btn-ghost" onclick="showTab('copy')">Ver prompts de copy</button>
@@ -152,20 +153,6 @@
           </div>
         </div>
 
-        <div class="prompt-card" style="cursor:pointer" onclick="showTab('reels')">
-          <div class="prompt-card-header">
-            <div class="prompt-icon">🎬</div>
-            <div class="prompt-meta">
-              <div class="prompt-tag">Agent 3.5</div>
-              <h3>Roteiro Reels</h3>
-              <p>Roteiros virais de Reels (Wallace Leite) de alta retenção baseados no seu nicho.</p>
-            </div>
-          </div>
-          <div class="prompt-card-body">
-            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Hooks explosivos · Loops de retenção · Automação ManyChat</p>
-          </div>
-        </div>
-
         <div class="prompt-card" style="cursor:pointer" onclick="showTab('imagens')">
           <div class="prompt-card-header">
             <div class="prompt-icon">🖼️</div>
@@ -176,8 +163,8 @@
             </div>
           </div>
           <div class="prompt-card-body">
-            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">DALL-E 4o · Ideogram · Canva
-              IA · 7 slides estruturados</p>
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">DALL-E 4o / NanoBanana
+              IA · 7 páginas estruturados</p>
           </div>
         </div>
 
@@ -187,12 +174,12 @@
             <div class="prompt-meta">
               <div class="prompt-tag">Agent 5</div>
               <h3>Slides e Apresentações</h3>
-              <p>De ideia a apresentação profissional em menos de 3 minutos.</p>
+              <p>Gere cada slide como imagem no ChatGPT e monte no Canva ou PowerPoint.</p>
             </div>
           </div>
           <div class="prompt-card-body">
-            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Gamma.app · Consulta ·
-              Palestra · Proposta</p>
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">DALL-E 4o · Canva · PowerPoint
+              · Imagem por slide</p>
           </div>
         </div>
 
@@ -208,6 +195,21 @@
           <div class="prompt-card-body">
             <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Rosto real · Portfólio
               realista · Posts com Lettering</p>
+          </div>
+        </div>
+
+        <div class="prompt-card" style="cursor:pointer" onclick="showTab('reels')">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎬</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent 7</div>
+              <h3>Roteiro Reels</h3>
+              <p>Roteiros virais de Reels (Wallace Leite) de alta retenção baseados no seu nicho.</p>
+            </div>
+          </div>
+          <div class="prompt-card-body">
+            <p style="font-size:13px;color:var(--stone);font-family:var(--font-display);">Hooks explosivos · Loops de
+              retenção · Automação ManyChat</p>
           </div>
         </div>
       </div>
@@ -261,11 +263,13 @@
             </div>
           </div>
           <div class="prompt-card-body">
-            <div class="prompt-raw" style="background:rgba(233,77,29,0.04);border-color:rgba(233,77,29,0.2);">"Me faz um
+            <div class="prompt-raw" style="background:rgba(233,77,29,0.04);border-color:rgba(233,77,29,0.2);">"Me faz
+              um
               post sobre alimentação saudável"</div>
             <p
               style="font-size:13px;color:var(--stone);margin-top:12px;font-family:var(--font-display);line-height:1.5;">
-              Resultado: post genérico com "alimentação equilibrada" e "hábitos saudáveis". Sem voz, sem conversão.</p>
+              Resultado: post genérico com "alimentação equilibrada" e "hábitos saudáveis". Sem voz, sem conversão.
+            </p>
           </div>
         </div>
 
@@ -1009,117 +1013,127 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════ REELS ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-reels">
-    <div class="agent-header">
-      <div class="agent-number">3.5</div>
-      <div class="agent-info">
-        <h2>Roteiro de Reels Virais</h2>
-        <p>Roteiros estruturados de alta retenção seguindo o Blueprint de Wallace Leite.</p>
-      </div>
-    </div>
-
-    <!-- Workflow Steps Grid -->
-    <div class="steps-workflow">
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">1</div>
-        <div class="step-workflow-icon">✏️</div>
-        <div class="step-workflow-title">Preencha seus Dados</div>
-        <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e posicionamento.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">2</div>
-        <div class="step-workflow-icon">📋</div>
-        <div class="step-workflow-title">Copie o Prompt</div>
-        <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto. Clique em Copiar.</div>
-      </div>
-      <div class="step-workflow-card">
-        <div class="step-workflow-num">3</div>
-        <div class="step-workflow-icon">🤖</div>
-        <div class="step-workflow-title">Cole na sua IA</div>
-        <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o prompt como primeira mensagem.</div>
-      </div>
-    </div>
-
-    <div class="quote-block">
-      <p>"Roteiros com ganchos fortes nos primeiros 3 segundos retêm até 70% mais visualizações. Use os loops internos para prender a atenção do início ao fim."</p>
-    </div>
-
-    <div class="prompts-grid single">
-      <div class="prompt-card">
-        <div class="prompt-card-header">
-          <div class="prompt-icon">🎬</div>
-          <div class="prompt-meta">
-            <div class="prompt-tag">Agent Reels</div>
-            <h3>Gerador de Roteiro Reels Viral</h3>
-            <p>Gere o prompt para criar roteiros virais e hooks magnéticos para seu perfil de saúde.</p>
-          </div>
+    <!-- ═══════════════════════════════ REELS ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-reels">
+      <div class="agent-header">
+        <div class="agent-number">07</div>
+        <div class="agent-info">
+          <h2>Roteiro de Reels Virais</h2>
+          <p>Roteiros estruturados de alta retenção seguindo o Blueprint de Wallace Leite.</p>
         </div>
-        <div class="prompt-card-body">
-          <div class="step-badge">Passo 1: Preencher Dados</div>
-          <div class="form-group">
-            <label class="form-label">Especialidade / Nicho</label>
-            <input type="text" class="form-input" id="reels-especialidade" placeholder="Ex: nutricionista clínica, terapeuta familiar" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Público-Alvo</label>
-            <input type="text" class="form-input" id="reels-publico" placeholder="Ex: mães ocupadas 30-45 anos que sofrem de exaustão" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Principal Dor do Público</label>
-            <input type="text" class="form-input" id="reels-dor" placeholder="Ex: não ter tempo para preparar refeições saudáveis e comer mal por ansiedade" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Principal Desejo do Público</label>
-            <input type="text" class="form-input" id="reels-desejo" placeholder="Ex: ter energia para o dia a dia e se sentir bem com o próprio corpo" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Serviço / Oferta a ser vendida</label>
-            <input type="text" class="form-input" id="reels-oferta" placeholder="Ex: guia gratuito de lanches rápidos / consulta de avaliação online" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tom de Voz Desejado</label>
-            <input type="text" class="form-input" id="reels-tom" placeholder="Ex: Leve e descontraído, acolhedor, assertivo" value="Leve e descontraído" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tema do Conteúdo (Reels)</label>
-            <input type="text" class="form-input" id="reels-tema" placeholder="Ex: Como se alimentar bem mesmo sem tempo para cozinhar" />
-          </div>
-          <button class="generate-btn" onclick="generateReels()">
-            <span class="spinner" id="reels-spin"></span>
-            <span id="reels-btn-text">Gerar prompt do Roteiro Reels →</span>
-          </button>
-          <div class="output-area" id="reels-output">
-            <div class="output-header">
-              <span class="output-header-title">Passo 2: Prompt Reels Virais</span>
-              <button class="copy-btn" onclick="copyOutput('reels-result', this)">Copiar Prompt</button>
+      </div>
+
+      <!-- Workflow Steps Grid -->
+      <div class="steps-workflow">
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">1</div>
+          <div class="step-workflow-icon">✏️</div>
+          <div class="step-workflow-title">Preencha seus Dados</div>
+          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
+            posicionamento.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">2</div>
+          <div class="step-workflow-icon">📋</div>
+          <div class="step-workflow-title">Copie o Prompt</div>
+          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
+            Clique em Copiar.</div>
+        </div>
+        <div class="step-workflow-card">
+          <div class="step-workflow-num">3</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Cole na sua IA</div>
+          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
+            prompt como primeira mensagem.</div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>"Roteiros com ganchos fortes nos primeiros 3 segundos retêm até 70% mais visualizações. Use os loops internos
+          para prender a atenção do início ao fim."</p>
+      </div>
+
+      <div class="prompts-grid single">
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <div class="prompt-icon">🎬</div>
+            <div class="prompt-meta">
+              <div class="prompt-tag">Agent Reels</div>
+              <h3>Gerador de Roteiro Reels Viral</h3>
+              <p>Gere o prompt para criar roteiros virais e hooks magnéticos para seu perfil de saúde.</p>
             </div>
-            <textarea readonly class="output-text" id="reels-result"></textarea>
-            <div class="output-footer">
-              <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
-              <div class="ia-links">
-                <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+          </div>
+          <div class="prompt-card-body">
+            <div class="step-badge">Passo 1: Preencher Dados</div>
+            <div class="form-group">
+              <label class="form-label">Especialidade / Nicho</label>
+              <input type="text" class="form-input" id="reels-especialidade"
+                placeholder="Ex: nutricionista clínica, terapeuta familiar" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Público-Alvo</label>
+              <input type="text" class="form-input" id="reels-publico"
+                placeholder="Ex: mães ocupadas 30-45 anos que sofrem de exaustão" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Principal Dor do Público</label>
+              <input type="text" class="form-input" id="reels-dor"
+                placeholder="Ex: não ter tempo para preparar refeições saudáveis e comer mal por ansiedade" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Principal Desejo do Público</label>
+              <input type="text" class="form-input" id="reels-desejo"
+                placeholder="Ex: ter energia para o dia a dia e se sentir bem com o próprio corpo" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Serviço / Oferta a ser vendida</label>
+              <input type="text" class="form-input" id="reels-oferta"
+                placeholder="Ex: guia gratuito de lanches rápidos / consulta de avaliação online" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tom de Voz Desejado</label>
+              <input type="text" class="form-input" id="reels-tom"
+                placeholder="Ex: Leve e descontraído, acolhedor, assertivo" value="Leve e descontraído" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tema do Conteúdo (Reels)</label>
+              <input type="text" class="form-input" id="reels-tema"
+                placeholder="Ex: Como se alimentar bem mesmo sem tempo para cozinhar" />
+            </div>
+            <button class="generate-btn" onclick="generateReels()">
+              <span class="spinner" id="reels-spin"></span>
+              <span id="reels-btn-text">Gerar prompt do Roteiro Reels →</span>
+            </button>
+            <div class="output-area" id="reels-output">
+              <div class="output-header">
+                <span class="output-header-title">Passo 2: Prompt Reels Virais</span>
+                <button class="copy-btn" onclick="copyOutput('reels-result', this)">Copiar Prompt</button>
+              </div>
+              <textarea readonly class="output-text" id="reels-result"></textarea>
+              <div class="output-footer">
+                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <div class="ia-links">
+                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
+                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════ IMAGENS ═══════════════════════════════ -->
-  <div class="tab-page" id="tab-imagens">
-    <div class="agent-header">
-      <div class="agent-number">04</div>
-      <div class="agent-info">
-        <h2>Imagens e Carrosseis</h2>
-        <p>A taxa slide 1→2 determina se o algoritmo distribui ou enterra seu carrossel.</p>
+    <!-- ═══════════════════════════════ IMAGENS ═══════════════════════════════ -->
+    <div class="tab-page" id="tab-imagens">
+      <div class="agent-header">
+        <div class="agent-number">04</div>
+        <div class="agent-info">
+          <h2>Imagens e Carrosseis</h2>
+          <p>A taxa slide 1→2 determina se o algoritmo distribui ou enterra seu carrossel.</p>
+        </div>
       </div>
-    </div>
 
       <!-- Workflow Steps Grid -->
       <div class="steps-workflow">
@@ -1325,7 +1339,7 @@
         <div class="agent-number">05</div>
         <div class="agent-info">
           <h2>Slides e Apresentações</h2>
-          <p>De ideia a apresentação profissional em menos de 3 minutos. Gamma.app + ChatGPT.</p>
+          <p>Gere cada slide como imagem no ChatGPT e monte no Canva ou PowerPoint.</p>
         </div>
       </div>
 
@@ -1335,38 +1349,38 @@
           <div class="step-workflow-num">1</div>
           <div class="step-workflow-icon">✏️</div>
           <div class="step-workflow-title">Preencha seus Dados</div>
-          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
-            posicionamento.</div>
+          <div class="step-workflow-desc">Complete o formulário com o tema, público e objetivo da apresentação.</div>
         </div>
         <div class="step-workflow-card">
           <div class="step-workflow-num">2</div>
-          <div class="step-workflow-icon">📋</div>
-          <div class="step-workflow-title">Copie o Prompt</div>
-          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
-            Clique em Copiar.</div>
+          <div class="step-workflow-icon">🤖</div>
+          <div class="step-workflow-title">Gere Imagem por Imagem no ChatGPT</div>
+          <div class="step-workflow-desc">Cole o prompt no ChatGPT. Ele vai criar cada slide como uma imagem pronta — um
+            a um com DALL-E.</div>
         </div>
         <div class="step-workflow-card">
           <div class="step-workflow-num">3</div>
-          <div class="step-workflow-icon">🤖</div>
-          <div class="step-workflow-title">Cole na sua IA</div>
-          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
-            prompt como primeira mensagem.</div>
+          <div class="step-workflow-icon">🎨</div>
+          <div class="step-workflow-title">Monte no Canva ou PowerPoint</div>
+          <div class="step-workflow-desc">Baixe as imagens e insira em slides em branco no Canva ou PowerPoint.
+            Apresentação pronta em minutos.</div>
         </div>
       </div>
 
       <div class="quote-block">
-        <p>Regra dos 3: cada slide tem apenas 1 título + 1 ideia + 1 visual. Nunca dois conceitos no mesmo slide.</p>
+        <p>Regra dos 3: cada slide tem 1 título + 1 ideia + 1 visual. O ChatGPT gera cada imagem de forma independente —
+          você baixa e monta depois no Canva ou PowerPoint.</p>
       </div>
 
       <div class="prompts-grid">
-        <!-- Roteiro Geral -->
+        <!-- Apresentação Geral -->
         <div class="prompt-card">
           <div class="prompt-card-header">
             <div class="prompt-icon">🎤</div>
             <div class="prompt-meta">
               <div class="prompt-tag">Prompt 5.1</div>
-              <h3>Roteiro de Apresentação</h3>
-              <p>Pronto para colar no Gamma.app e gerar design automático em segundos.</p>
+              <h3>Prompt de Slides (DALL-E)</h3>
+              <p>Gere cada slide como imagem no ChatGPT. Depois insira as imagens no Canva ou PowerPoint.</p>
             </div>
           </div>
           <div class="prompt-card-body">
@@ -1400,20 +1414,18 @@
             </div>
             <button class="generate-btn" onclick="generateSlides()">
               <span class="spinner" id="sl-spin"></span>
-              <span id="sl-btn-text">Gerar roteiro →</span>
+              <span id="sl-btn-text">Gerar prompt de slides →</span>
             </button>
             <div class="output-area" id="sl-output">
               <div class="output-header">
-                <span class="output-header-title">Passo 2: Prompt Roteiro Personalizado</span>
+                <span class="output-header-title">Passo 2: Prompt de Slides Gerado</span>
                 <button class="copy-btn" onclick="copyOutput('sl-result', this)">Copiar Prompt</button>
               </div>
               <textarea readonly class="output-text" id="sl-result"></textarea>
               <div class="output-footer">
-                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <span class="footer-label">Passo 3: Cole no ChatGPT com DALL-E</span>
                 <div class="ia-links">
-                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT (DALL-E)</a>
                 </div>
               </div>
             </div>
@@ -1427,7 +1439,7 @@
             <div class="prompt-meta">
               <div class="prompt-tag">Prompt 5.2</div>
               <h3>Proposta de Serviço</h3>
-              <p>Problema → Como você resolve → Prova social → CTA para reunião.</p>
+              <p>Slides de proposta visual — Problema → Solução → Prova → CTA.</p>
             </div>
           </div>
           <div class="prompt-card-body">
@@ -1452,34 +1464,32 @@
             </div>
             <button class="generate-btn" onclick="generateProposta()">
               <span class="spinner" id="pr-spin"></span>
-              <span id="pr-btn-text">Gerar proposta →</span>
+              <span id="pr-btn-text">Gerar prompt de proposta →</span>
             </button>
             <div class="output-area" id="pr-output">
               <div class="output-header">
-                <span class="output-header-title">Passo 2: Prompt Proposta Personalizada</span>
+                <span class="output-header-title">Passo 2: Prompt de Proposta Gerado</span>
                 <button class="copy-btn" onclick="copyOutput('pr-result', this)">Copiar Prompt</button>
               </div>
               <textarea readonly class="output-text" id="pr-result"></textarea>
               <div class="output-footer">
-                <span class="footer-label">Passo 3: Cole na sua IA favorita</span>
+                <span class="footer-label">Passo 3: Cole no ChatGPT com DALL-E</span>
                 <div class="ia-links">
-                  <a href="https://claude.ai" target="_blank" class="ia-link claude">Abrir Claude</a>
-                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT</a>
-                  <a href="https://gemini.google.com" target="_blank" class="ia-link gemini">Abrir Gemini</a>
+                  <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT (DALL-E)</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Gamma instructions -->
+        <!-- Como montar no Canva ou PowerPoint -->
         <div class="prompt-card" style="grid-column: 1 / -1;">
           <div class="prompt-card-header">
-            <div class="prompt-icon">⚡️</div>
+            <div class="prompt-icon">🎨</div>
             <div class="prompt-meta">
-              <div class="prompt-tag">Ferramenta</div>
-              <h3>Como usar no Gamma.app</h3>
-              <p>Do roteiro ao design completo em menos de 60 segundos.</p>
+              <div class="prompt-tag">Montagem Final</div>
+              <h3>Como montar no Canva ou PowerPoint</h3>
+              <p>Com as imagens geradas no ChatGPT, monte sua apresentação em poucos minutos.</p>
             </div>
           </div>
           <div class="prompt-card-body">
@@ -1493,23 +1503,25 @@
               <tbody>
                 <tr>
                   <td><strong>1</strong></td>
-                  <td>Gere o roteiro acima com o Agent 5</td>
+                  <td>Gere os slides com o prompt acima no ChatGPT — peça um slide por vez</td>
                 </tr>
                 <tr>
                   <td><strong>2</strong></td>
-                  <td>Abra <strong>gamma.app</strong> → clique em <strong>New</strong> → <strong>Import</strong></td>
+                  <td>Baixe cada imagem gerada (clique com o botão direito → Salvar imagem)</td>
                 </tr>
                 <tr>
                   <td><strong>3</strong></td>
-                  <td>Cole o roteiro completo no campo de texto</td>
+                  <td><strong>Canva:</strong> Crie uma apresentação → insira cada imagem como fundo do slide (Uploads →
+                    arraste para o slide)</td>
                 </tr>
                 <tr>
                   <td><strong>4</strong></td>
-                  <td>Escolha tema de cores → clique em <strong>Generate</strong></td>
+                  <td><strong>PowerPoint:</strong> Inserir → Imagens → selecione os arquivos → ajuste para preencher o
+                    slide inteiro</td>
                 </tr>
                 <tr>
                   <td><strong>5</strong></td>
-                  <td>Ajuste e exporte em PDF ou apresente pelo link</td>
+                  <td>Adicione transições, ajuste a ordem e exporte em PDF ou apresente ao vivo</td>
                 </tr>
               </tbody>
             </table>
@@ -1518,13 +1530,16 @@
       </div>
     </div>
 
+
+
+
     <!-- ═══════════════════════════════ IMAGEM PESSOAL (ROSTOIA) ═══════════════════════════════ -->
     <div class="tab-page" id="tab-imagempessoal">
       <div class="agent-header">
         <div class="agent-number">06</div>
         <div class="agent-info">
           <h2>Imagem Pessoal (RostoIA)</h2>
-          <p>Retratos profissionais e posts com lettering baseados no seu rosto e DNA visual.</p>
+          <p>Envie sua foto e gere retratos profissionais, posts e designs preservando 100% do seu rosto real.</p>
         </div>
       </div>
 
@@ -1532,170 +1547,97 @@
       <div class="steps-workflow">
         <div class="step-workflow-card">
           <div class="step-workflow-num">1</div>
-          <div class="step-workflow-icon">✏️</div>
-          <div class="step-workflow-title">Preencha seus Dados</div>
-          <div class="step-workflow-desc">Complete os campos do formulário para personalizar o prompt com seu nicho e
-            posicionamento.</div>
+          <div class="step-workflow-icon">📸</div>
+          <div class="step-workflow-title">Configure a Imagem</div>
+          <div class="step-workflow-desc">Escolha o tipo de imagem e configure o ambiente e enquadramento desejados.
+          </div>
         </div>
         <div class="step-workflow-card">
           <div class="step-workflow-num">2</div>
           <div class="step-workflow-icon">📋</div>
           <div class="step-workflow-title">Copie o Prompt</div>
-          <div class="step-workflow-desc">O prompt de sistema estruturado é gerado instantaneamente na área de texto.
-            Clique em Copiar.</div>
+          <div class="step-workflow-desc">Gere e copie o prompt que instrui o ChatGPT a preservar seu rosto exatamente
+            como é.</div>
         </div>
         <div class="step-workflow-card">
           <div class="step-workflow-num">3</div>
           <div class="step-workflow-icon">🤖</div>
-          <div class="step-workflow-title">Cole na sua IA</div>
-          <div class="step-workflow-desc">Clique nos atalhos rápidos para abrir o Claude, ChatGPT ou Gemini e cole o
-            prompt como primeira mensagem.</div>
+          <div class="step-workflow-title">Envie a Foto + Cole o Prompt</div>
+          <div class="step-workflow-desc">No ChatGPT, anexe sua foto de rosto primeiro. Depois cole o prompt gerado na
+            mesma mensagem.</div>
         </div>
       </div>
 
       <div class="quote-block">
-        <p>O DALL-E mantém traços gerais (tom de pele, cabelo, formato do rosto, biotipo) — não é reprodução exata. Use
-          prompts ultra-específicos para obter a máxima semelhança.</p>
+        <p>⚠️ Envie a foto do rosto <strong>antes</strong> de colar o prompt no ChatGPT. Quanto mais nítida e bem
+          iluminada a foto, maior a fidelidade ao seu rosto real.</p>
       </div>
 
       <div class="prompts-grid">
-        <!-- RostoIA Saúde Generator -->
+        <!-- RostoIA Generator -->
         <div class="prompt-card" style="grid-column: 1 / -1;">
           <div class="prompt-card-header">
             <div class="prompt-icon">📸</div>
             <div class="prompt-meta">
               <div class="prompt-tag">Agent 6</div>
-              <h3>Gerador RostoIA Saúde</h3>
-              <p>Preencha os dados da sua aparência, escolha o tipo de imagem desejada e gere o prompt DALL-E
-                correspondente.</p>
+              <h3>Gerador RostoIA</h3>
+              <p>Configure o tipo de imagem desejada. O ChatGPT vai usar a foto que você anexar como referência exata do
+                rosto — sem alterar nada.</p>
             </div>
           </div>
           <div class="prompt-card-body">
-            <div class="step-badge">Passo 1: Preencher Dados</div>
-            <h3 style="font-size:16px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">1.
-              Características Físicas</h3>
+            <div class="step-badge">Passo 1: Configurar Imagem</div>
 
             <div class="form-group">
-              <label class="form-label">Gênero e Faixa Etária</label>
-              <input type="text" class="form-input" id="rp-genero"
-                placeholder="Ex: Mulher de 35 anos / Homem de 40 anos" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Tom de Pele e Subtom</label>
-              <input type="text" class="form-input" id="rp-pele"
-                placeholder="Ex: Pele clara com subtom quente / Pele negra escura com subtom frio" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Formato do Rosto</label>
-              <input type="text" class="form-input" id="rp-rosto"
-                placeholder="Ex: Rosto oval / Rosto quadrado com maxilar marcado" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Olhos (Cor e Formato)</label>
-              <input type="text" class="form-input" id="rp-olhos"
-                placeholder="Ex: Olhos castanhos amendoados / Olhos verdes marcantes" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Sobrancelhas (Espessura, Arco e Cor)</label>
-              <input type="text" class="form-input" id="rp-sobrancelhas"
-                placeholder="Ex: Sobrancelhas grossas arqueadas e pretas" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Cabelo (Comprimento, Cor, Textura e Estilo)</label>
-              <input type="text" class="form-input" id="rp-cabelo"
-                placeholder="Ex: Cabelo curto chanel liso castanho escuro / Cabelo médio cacheado ruivo" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Biotipo & Traços Marcantes (Opcional)</label>
-              <input type="text" class="form-input" id="rp-biotipo"
-                placeholder="Ex: Biotipo magro, usa óculos de grau redondos pretos, sorriso com covinhas" />
-            </div>
-
-            <h3
-              style="font-size:16px; margin-top:28px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">
-              2. DNA Visual da Marca</h3>
-
-            <div class="form-group">
-              <label class="form-label">Estilo Visual & Cores</label>
-              <input type="text" class="form-input" id="rp-dna-estilo"
-                placeholder="Ex: Fotografia lifestyle editorial, paleta verde oliva e beige neutro" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Iluminação e Elementos Recorrentes</label>
-              <input type="text" class="form-input" id="rp-dna-luz"
-                placeholder="Ex: Luz natural suave de janela, consultório médico moderno e plantas de fundo" />
-            </div>
-
-            <h3
-              style="font-size:16px; margin-top:28px; margin-bottom:16px; font-family:var(--font-display); color:var(--ink);">
-              3. Configuração da Imagem</h3>
-
-            <div class="form-group">
-              <label class="form-label">Tipo de Produto</label>
+              <label class="form-label">Tipo de Imagem</label>
               <select class="form-select" id="rp-tipo-produto" onchange="toggleRostoIAType()">
-                <option value="portfolio">Portfólio Profissional (Retrato realista sem texto)</option>
-                <option value="post">Post com Lettering (Composição com área para texto)</option>
+                <option value="portfolio">Retrato Profissional (foto realista, sem texto)</option>
+                <option value="post">Post com Lettering (composição com área limpa para texto)</option>
               </select>
             </div>
 
-            <!-- Fields specific to PORTFOLIO -->
-            <div id="rp-group-portfolio">
-              <div class="form-group">
-                <label class="form-label">Contexto (Ambiente)</label>
-                <select class="form-select" id="rp-port-contexto">
-                  <option value="consultorio">Consultório / Clínica</option>
-                  <option value="externo">Externo / Lifestyle</option>
-                  <option value="estudio">Estúdio Neutro</option>
-                  <option value="cafe">Café Moderno</option>
-                  <option value="urbano">Urbano</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Enquadramento</label>
-                <select class="form-select" id="rp-port-enquadramento">
-                  <option value="rosto">Close-up (Rosto)</option>
-                  <option value="meio-corpo" selected>Plano Médio (Meio corpo)</option>
-                  <option value="corpo-inteiro">Plano Inteiro (Corpo inteiro)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Expressão e Ação</label>
-                <input type="text" class="form-input" id="rp-port-expressao"
-                  placeholder="Ex: Olhando para a câmera sorrindo / segurando um tablet e conversando" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Vestimenta (Roupa)</label>
-                <input type="text" class="form-input" id="rp-port-roupa"
-                  placeholder="Ex: Jaleco branco por cima de camisa social / Roupa casual chique" />
-              </div>
+            <div class="form-group">
+              <label class="form-label">Ambiente / Fundo</label>
+              <select class="form-select" id="rp-contexto">
+                <option value="consultorio">Consultório ou Clínica</option>
+                <option value="externo">Externo / Lifestyle</option>
+                <option value="estudio">Estúdio Neutro</option>
+                <option value="cafe">Café Moderno</option>
+                <option value="urbano">Urbano / Cidade</option>
+              </select>
             </div>
 
-            <!-- Fields specific to POST WITH LETTERING -->
+            <div class="form-group">
+              <label class="form-label">Enquadramento</label>
+              <select class="form-select" id="rp-enquadramento">
+                <option value="rosto">Close-up (Rosto)</option>
+                <option value="meio-corpo" selected>Plano Médio (Meio corpo)</option>
+                <option value="corpo-inteiro">Plano Inteiro (Corpo inteiro)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Vestimenta (opcional)</label>
+              <input type="text" class="form-input" id="rp-roupa"
+                placeholder="Ex: jaleco branco, roupa casual elegante" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Expressão / Postura</label>
+              <input type="text" class="form-input" id="rp-expressao"
+                placeholder="Ex: sorrindo, olhando para a câmera, confiante" />
+            </div>
+
+            <!-- Área de texto (só para Post) -->
             <div id="rp-group-post" style="display:none;">
               <div class="form-group">
-                <label class="form-label">Tema ou Mensagem</label>
-                <input type="text" class="form-input" id="rp-post-tema"
-                  placeholder="Ex: Dica rápida sobre saúde / Frase motivacional de segunda-feira" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Posição da Área de Texto Limpa (Placeholder)</label>
+                <label class="form-label">Posição da Área de Texto</label>
                 <select class="form-select" id="rp-post-posicao">
                   <option value="lado-direito">Lado Direito</option>
                   <option value="lado-esquerdo">Lado Esquerdo</option>
                   <option value="inferior">Parte Inferior</option>
                   <option value="topo">Parte Superior</option>
-                  <option value="centro-desfocado">Centro Desfocado</option>
                 </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Expressão e Ação</label>
-                <input type="text" class="form-input" id="rp-post-expressao"
-                  placeholder="Ex: Apontando para o lado do texto com expressão confiante" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Vestimenta (Roupa)</label>
-                <input type="text" class="form-input" id="rp-post-roupa"
-                  placeholder="Ex: Jaleco médico / Roupa profissional elegante" />
               </div>
             </div>
 
@@ -1705,16 +1647,14 @@
 
             <div class="output-area" id="rp-output">
               <div class="output-header">
-                <span class="output-header-title">Passo 2: Prompt DALL-E RostoIA</span>
+                <span class="output-header-title">Passo 2: Prompt RostoIA Gerado</span>
                 <button class="copy-btn" onclick="copyOutput('rp-result', this)">Copiar Prompt</button>
               </div>
               <textarea readonly class="output-text" id="rp-result"></textarea>
               <div class="output-footer">
-                <span class="footer-label">Passo 3: Cole na sua IA de imagens favorita</span>
+                <span class="footer-label">Passo 3: Anexe sua foto + cole o prompt no ChatGPT</span>
                 <div class="ia-links">
                   <a href="https://chatgpt.com" target="_blank" class="ia-link chatgpt">Abrir ChatGPT (DALL-E)</a>
-                  <a href="https://ideogram.ai" target="_blank" class="ia-link ideogram">Abrir Ideogram</a>
-                  <a href="https://midjourney.com" target="_blank" class="ia-link midjourney">Abrir Midjourney</a>
                 </div>
               </div>
             </div>
@@ -1723,13 +1663,16 @@
       </div>
     </div>
 
+
+
+
   </main>
 
   <footer>
     <div class="footer-logo">
       <img src="images/logo-white.png" alt="S-LAB Logo">
     </div>
-    <div class="footer-sub">S-LAB · Laboratório de Desenvolvimento Profissional em Saúde · 2026</div>
+    <div class="footer-sub">S-LAB · Academia de Posicionamento e Inteligência em Saúde · 2026</div>
   </footer>
 
   <script>
@@ -1781,10 +1724,8 @@
     function toggleRostoIAType() {
       const val = document.getElementById('rp-tipo-produto').value;
       if (val === 'portfolio') {
-        document.getElementById('rp-group-portfolio').style.display = 'block';
         document.getElementById('rp-group-post').style.display = 'none';
       } else {
-        document.getElementById('rp-group-portfolio').style.display = 'none';
         document.getElementById('rp-group-post').style.display = 'block';
       }
     }
@@ -2049,10 +1990,7 @@ Use esse DNA em todos os prompts de imagem desta série.
 4. Exclusões sempre presentes: "No text, no watermarks, no plastic-looking skin, no oversaturated colors, no artificial background".
 5. Máximo 12 palavras de texto por slide. No final, dê instruções de uso dos prompts no ChatGPT.`,
 
-      apresentacao: `Você é o AgentSkill - Apresentações, especialista em criar apresentações visuais completas diretamente no ChatGPT usando o DALL-E. Você gera cada slide como uma imagem pronta — com layout, tipografia, cores e conteúdo — sem depender de nenhuma ferramenta externa.
-Você aplica a Regra dos 3 em todo slide: 1 título, 1 ideia, 1 visual. Máximo 3 bullets por slide.
-
-Sua tarefa é criar o roteiro detalhado de uma apresentação otimizado para colar no Gamma.app.
+      apresentacao: `Você é especialista em design de apresentações visuais. Sua tarefa é gerar cada slide como uma imagem independente usando o DALL-E do ChatGPT. O usuário vai baixar cada imagem e montar no Canva ou PowerPoint.
 
 [DADOS DA APRESENTAÇÃO]
 • Tema: [TEMA]
@@ -2060,20 +1998,29 @@ Sua tarefa é criar o roteiro detalhado de uma apresentação otimizado para col
 • Número de slides: [NUMERO]
 • Objetivo/Uso: [USO]
 
-IMPORTANTE: O briefing do profissional já foi concluído. NÃO faça perguntas. Pule a ETAPA 1 do seu fluxo padrão e passe diretamente para a ETAPA 2 — GERAÇÃO DOS SLIDES de uma vez só, para que o roteiro possa ser copiado e importado diretamente no Gamma.app.
+REGRA OBRIGATÓRIA: Gere cada slide como uma imagem separada, um de cada vez. Não liste o conteúdo em texto corrido — crie a imagem visual completa de cada slide diretamente com DALL-E.
 
-Siga a estrutura por slide no output:
-[Nº] | [TÍTULO DO SLIDE] (máx. 6 palavras)
-  Ponto 1: [1 linha de texto objetivo]
-  Ponto 2: [1 linha de texto objetivo]
-  Ponto 3: [1 linha de texto objetivo]
-  Visual: [descrição do elemento visual ideal — foto, ícone, gráfico]
-  Nota: [1 linha do que falar além do slide]
+ESTRUTURA DE CADA SLIDE (Regra dos 3):
+- 1 título impactante (máx. 6 palavras)
+- 1 ideia central por slide
+- 1 elemento visual (foto, ícone ou gráfico integrado ao design)
+- Máximo 3 bullets curtos
 
-Siga as diretrizes de quantidade e estrutura de slides para o objetivo "[USO]":
-- Capa (Slide 1) + Introdução do Problema (Slide 2) + Desenvolvimento de 1 ideia por slide + Conclusão/Próximos Passos (Último slide)
-- Se palestra: inclua slide de estatística ou dado no Slide 3 e erro comum no Slide 5.
-- Se proposta: use a estrutura Capa -> Problema -> Método de Solução -> Prova Social -> Escopo -> CTA.`,
+FORMATO DA IMAGEM:
+- Proporção 16:9 (apresentação paisagem)
+- Design clean, tipografia legível e de tamanho generoso
+- Cores consistentes entre todos os slides
+- Fundo sólido ou gradiente suave, sem poluição visual
+- Texto em cor contrastante com o fundo
+
+ESTRUTURA DA APRESENTAÇÃO ([USO]):
+- Slide 1: Capa — Título impactante + especialidade
+- Slide 2: O problema do público — dor real e direta
+- Slides do meio: 1 ideia por slide, com dado, dica ou exemplo prático
+- Pentúltimo slide: Resumo ou bônus — síntese das ideias principais
+- Último slide: CTA — 1 única ação clara para o público
+
+Antes de começar, pergunte a paleta de cores preferida (ou sugira uma profissional baseada no tema). Depois, gere os [NUMERO] slides um a um em sequência. Aguarde confirmação entre cada imagem se necessário.`,
 
       reels: `Atue como um estrategista de conteúdo especializado em Reels.
 
@@ -2557,155 +2504,127 @@ Regras absolutas (NUNCA QUEBRE):
       const cli = document.getElementById('pr-cliente').value;
       const num = document.getElementById('pr-num').value;
 
-      const outputText = `Você é o AgentSkill - Apresentações, especialista em criar apresentações visuais completas diretamente no ChatGPT usando o DALL-E.
-Sua tarefa é criar uma proposta de serviço estruturada com ${num} slides com base nos seguintes dados:
+      const outputText = `Você é especialista em design de apresentações comerciais. Gere cada slide desta proposta como uma imagem independente usando DALL-E. O usuário vai baixar as imagens e montar no Canva ou PowerPoint.
 
-• Serviço oferecido: ${serv}
+DADOS DA PROPOSTA:
+• Serviço: ${serv}
 • Perfil do cliente: ${cli}
+• Número de slides: ${num}
 
-Siga as regras de estrutura de proposta da S-LAB:
-- Slide 1: Capa — seu nome + especialidade
+ESTRUTURA OBRIGATÓRIA (${num} slides):
+- Slide 1: Capa — Nome + especialidade + slogan curto
 - Slide 2: O problema do cliente — a dor real, sem rodeios
-- Slide 3: Como você resolve — método de solução específico
-- Slide 4: Prova social — resultados reais ou depoimento
-- Slides intermediários: Detalhes do escopo do serviço, processo, entregas
-- Último slide: CTA para reunião — 1 ação clara com urgência
+- Slide 3: Como você resolve — método específico
+- Slide 4: Prova social — resultado real ou depoimento
+- Slides intermediários: Escopo do serviço, processo, entregas
+- Último slide: CTA — 1 ação clara com urgência (ex: "Agende agora")
 
-Para cada slide, forneça:
-- Título (máx. 6 palavras)
-- 2-3 pontos de texto objetivos
-- Visual sugerido (foto, ícone, gráfico)
-- Nota do apresentador (o que falar)
+REGRAS DE DESIGN:
+- Proporção 16:9
+- 1 título + 1 ideia + 1 visual por slide (Regra dos 3)
+- Máximo 3 bullets curtos
+- Paleta profissional consistente em todos os slides
+- Tipografia clean e legível
 
-Prepare a proposta em formato otimizado para colar no Gamma.app.`;
+Gere os slides um a um como imagens DALL-E. Comece pela capa.`;
 
       showGeneratedPrompt(outputText, 'pr-output', 'pr-result');
     }
 
     function generateImagemPessoal() {
-      const genero = document.getElementById('rp-genero').value;
-      const pele = document.getElementById('rp-pele').value;
-      const rosto = document.getElementById('rp-rosto').value;
-      const olhos = document.getElementById('rp-olhos').value;
-      const sobrancelhas = document.getElementById('rp-sobrancelhas').value;
-      const cabelo = document.getElementById('rp-cabelo').value;
-      const biotipo = document.getElementById('rp-biotipo').value;
-
-      const dnaEstilo = document.getElementById('rp-dna-estilo').value;
-      const dnaLuz = document.getElementById('rp-dna-luz').value;
-
       const tipo = document.getElementById('rp-tipo-produto').value;
+      const contexto = document.getElementById('rp-contexto').value;
+      const enquadramento = document.getElementById('rp-enquadramento').value;
+      const roupa = document.getElementById('rp-roupa').value;
+      const expressao = document.getElementById('rp-expressao').value;
+
+      const contextMap = {
+        'consultorio': 'consultório médico moderno, luz suave e difusa, ambiente realista',
+        'externo': 'ambiente externo com luz natural, fotografia lifestyle',
+        'estudio': 'estúdio neutro com fundo limpo, luz controlada e profissional',
+        'cafe': 'café moderno aconchegante, luz ambiente quente',
+        'urbano': 'ambiente urbano, luz natural, fundo desfocado'
+      };
+
+      const framingMap = {
+        'rosto': 'close-up shot (apenas rosto)',
+        'meio-corpo': 'medium shot (da cintura para cima)',
+        'corpo-inteiro': 'full body shot (corpo inteiro)'
+      };
+
+      const contextText = contextMap[contexto] || contexto;
+      const framingText = framingMap[enquadramento] || enquadramento;
 
       let promptText = '';
 
       if (tipo === 'portfolio') {
-        const contexto = document.getElementById('rp-port-contexto').value;
-        const enquadramento = document.getElementById('rp-port-enquadramento').value;
-        const expressao = document.getElementById('rp-port-expressao').value;
-        const roupa = document.getElementById('rp-port-roupa').value;
+        promptText = `INSTRUÇÃO CRÍTICA: Use a foto que estou anexando como referência EXATA do rosto. Preserve com fidelidade absoluta: formato do rosto, tom de pele, cor e formato dos olhos, sobrancelhas, cabelo (cor, textura, comprimento) e todos os traços faciais. NÃO idealize, NÃO suavize, NÃO altere NADA do rosto. A pessoa na imagem gerada deve ser reconhecível como a mesma da foto enviada.
 
-        const contextMap = {
-          'consultorio': 'on-location medical setting, soft diffused light, realistic clinical environment',
-          'externo': 'on-location photography, ambient natural light, environment-integrated',
-          'estudio': 'clean studio, controlled soft light, neutral background',
-          'cafe': 'cozy café setting, warm ambient light, depth of field',
-          'urbano': 'urban street setting, soft natural light, city background blur'
+Crie um retrato profissional fotorrealistíco com as seguintes configurações:
+
+AMBIENTE: ${contextText}
+ENQUADRAMENTO: ${framingText}
+${roupa ? `VESTIMENTA: ${roupa}` : 'VESTIMENTA: roupa profissional elegante'}
+EXPRESSÃO / POSTURA: ${expressao || 'confiante, olhando para a câmera com expressão natural'}
+
+REGRAS DE PRODUÇÃO:
+- Fotografia de alta resolução, aparência profissional e natural
+- Textura de pele natural e realista (sem suavização excessiva)
+- Sem fundos artificiais de estúdio (a menos que estúdio tenha sido solicitado)
+- Sem texto, sem marcas d'água, sem proporções irreais
+- Formato quadrado 1:1`;
+
+      } else {
+        const posicao = document.getElementById('rp-post-posicao').value;
+        const posMap = {
+          'lado-direito': 'lado direito do frame',
+          'lado-esquerdo': 'lado esquerdo do frame',
+          'inferior': 'parte inferior do frame',
+          'topo': 'parte superior do frame'
         };
+        const posText = posMap[posicao] || posicao;
 
-        const framingMap = {
-          'rosto': 'close-up shot',
-          'meio-corpo': 'medium shot (waist up)',
-          'corpo-inteiro': 'full body shot'
-        };
+        promptText = `INSTRUÇÃO CRÍTICA: Use a foto que estou anexando como referência EXATA do rosto. Preserve com fidelidade absoluta: formato do rosto, tom de pele, cor e formato dos olhos, sobrancelhas, cabelo (cor, textura, comprimento) e todos os traços faciais. NÃO idealize, NÃO suavize, NÃO altere NADA do rosto. A pessoa na imagem gerada deve ser reconhecível como a mesma da foto enviada.
 
-        const styleBase = contextMap[contexto] || contexto;
-        const framingText = framingMap[enquadramento] || enquadramento;
+Crie um post para redes sociais fotorrealistíco com as seguintes configurações:
 
-        promptText = `${styleBase}, photorealistic portrait, high resolution, shot on camera.
+AMBIENTE: ${contextText}
+ENQUADRAMENTO: plano médio (da cintura para cima)
+${roupa ? `VESTIMENTA: ${roupa}` : 'VESTIMENTA: roupa profissional elegante'}
+EXPRESSÃO / POSTURA: ${expressao || 'confiante, olhando para a câmera'}
 
-SUBJECT — maintain exactly:
-${genero}. ${pele}. ${rosto}. ${olhos}. ${sobrancelhas}. ${cabelo}. ${biotipo ? biotipo : ''}
-Wearing: ${roupa}.
+ÁREA LIMPA PARA TEXTO:
+O ${posText} deve ser clean, plano e sem elementos visuais — espaço reservado para adicionar texto depois no Canva. Ocupa ~30-40% do frame.
 
-EXPRESSION & ACTION: ${expressao}
-FRAMING: ${framingText}
+REGRAS DE PRODUÇÃO:
+- Fotografia de alta resolução, aparência profissional e natural
+- Textura de pele realista (sem suavização excessiva)
+- Sem texto na imagem. Sem marcas d'água
+- Formato quadrado 1:1 (Instagram feed)`;
+      }
 
-ENVIRONMENT & LIGHTING:
-Realistic setting. Lighting: ${dnaLuz}.
-Background: realistic environment, no artificial studio backdrop.
-Camera feel: natural grain, realistic depth, no over-processed skin.
+      showGeneratedPrompt(promptText, 'rp-output', 'rp-result');
+    }
+    function generateReels() {
+      const esp = document.getElementById('reels-especialidade').value;
+      const pub = document.getElementById('reels-publico').value;
+      const dor = document.getElementById('reels-dor').value;
+      const desejo = document.getElementById('reels-desejo').value;
+      const oferta = document.getElementById('reels-oferta').value;
+      const tom = document.getElementById('reels-tom').value;
+      const tema = document.getElementById('reels-tema').value;
 
-STYLE: ${dnaEstilo} photography. Natural skin texture.
+      let template = AGENT_TEMPLATES.reels;
+      template = template.replace('[ESPECIALIDADE]', esp)
+        .replace('[PÚBLICO-ALVO]', pub)
+        .replace('[DOR]', dor)
+        .replace('[DESEJO]', desejo)
+        .replace('[OFERTA]', oferta)
+        .replace('[TOM]', tom)
+        .replace('[TEMA]', tema);
 
-STRICT RULES:
-Do not alter facial structure, skin tone, eye color, hair color or texture.
-No studio backdrop unless requested. No plastic or over-smoothed skin.
-No text overlays. No watermarks. No unrealistic proportions.
-Square 1:1 format.`;
-    
-  } else {
-    const tema = document.getElementById('rp-post-tema').value;
-    const posicao = document.getElementById('rp-post-posicao').value;
-    const expressao = document.getElementById('rp-post-expressao').value;
-    const roupa = document.getElementById('rp-post-roupa').value;
-    
-    const posMap = {
-      'lado-direito': 'right side',
-      'lado-esquerdo': 'left side',
-      'inferior': 'bottom area',
-      'topo': 'top area',
-      'centro-desfocado': 'blurred center'
-    };
-    
-    const posText = posMap[posicao] || posicao;
-    
-    promptText = `Social media post, photorealistic person in branded layout. Square 1:1, Instagram feed.
-
-SUBJECT — maintain exactly:
-${genero}. ${pele}. ${rosto}. ${olhos}. ${sobrancelhas}. ${cabelo}. ${biotipo ? biotipo : ''}
-Wearing: ${roupa}.
-
-EXPRESSION & ACTION: ${expressao}
-FRAMING: medium shot (waist up)
-
-COMPOSITION FOR TEXT:
-The ${posText} of the frame must be clean, flat, and uncluttered. Person positioned away from the text area.
-No graphic elements or textures in the text zone.
-
-VISUAL IDENTITY:
-Background: ${dnaEstilo}. Elements and Lighting: ${dnaLuz}.
-
-TEXT PLACEHOLDER:
-Blank area at the ${posText}, occupying ~30-40% of the frame. Flat, clean, high contrast with subject.
-
-STRICT RULES:
-Do not write text in the image. Do not alter facial structure, skin tone, eye color, hair or texture.
-No plastic skin. No watermarks. No unrealistic proportions. Square 1:1 format.`;
-  }
-  
-  showGeneratedPrompt(promptText, 'rp-output', 'rp-result');
-}
-
-function generateReels() {
-  const esp = document.getElementById('reels-especialidade').value;
-  const pub = document.getElementById('reels-publico').value;
-  const dor = document.getElementById('reels-dor').value;
-  const desejo = document.getElementById('reels-desejo').value;
-  const oferta = document.getElementById('reels-oferta').value;
-  const tom = document.getElementById('reels-tom').value;
-  const tema = document.getElementById('reels-tema').value;
-
-  let template = AGENT_TEMPLATES.reels;
-  template = template.replace('[ESPECIALIDADE]', esp)
-    .replace('[PÚBLICO-ALVO]', pub)
-    .replace('[DOR]', dor)
-    .replace('[DESEJO]', desejo)
-    .replace('[OFERTA]', oferta)
-    .replace('[TOM]', tom)
-    .replace('[TEMA]', tema);
-
-  showGeneratedPrompt(template, 'reels-output', 'reels-result');
-}
+      showGeneratedPrompt(template, 'reels-output', 'reels-result');
+    }
   </script>
 </body>
 
