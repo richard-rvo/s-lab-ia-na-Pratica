@@ -112,6 +112,9 @@ nav {
   background: var(--orange-50);
   border: 1px solid var(--orange-100);
 }
+.nav-toggle-btn {
+  display: none;
+}
 
 /* ── HERO ── */
 .hero {
@@ -769,30 +772,159 @@ footer {
 @media (max-width: 720px) {
   nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 20px;
-    margin: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    margin: 12px 16px;
     top: 12px;
+    border-radius: 999px;
+    flex-wrap: wrap;
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 52px;
+    overflow: hidden;
+  }
+  nav.menu-open {
     border-radius: 24px;
+    max-height: 420px;
+    padding: 16px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo img {
+    height: 28px;
+  }
+  .nav-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid var(--hairline-strong);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink-2);
+    cursor: pointer;
+    transition: all 200ms ease;
+    outline: none;
+  }
+  .nav-toggle-btn:hover {
+    background: var(--paper-2);
+  }
+  .menu-icon {
+    transition: transform 300ms ease;
+  }
+  .menu-icon line {
+    transition: transform 300ms ease, opacity 200ms ease;
+    transform-origin: center;
+  }
+  nav.menu-open .menu-icon {
+    transform: rotate(90deg);
+  }
+  nav.menu-open .line-2 { /* Top line */
+    transform: translateY(6px) rotate(45deg);
+  }
+  nav.menu-open .line-1 { /* Middle line */
+    opacity: 0;
+  }
+  nav.menu-open .line-3 { /* Bottom line */
+    transform: translateY(-6px) rotate(-45deg);
   }
   .nav-tabs {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 4px;
-    padding-bottom: 4px;
-    scrollbar-width: none;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--hairline);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 300ms ease, transform 300ms ease;
   }
-  .nav-tabs::-webkit-scrollbar {
-    display: none;
+  nav.menu-open .nav-tabs {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-tabs li {
+    display: block;
+    width: 100%;
+  }
+  .nav-tabs li:first-child {
+    grid-column: span 2;
   }
   .nav-tab {
-    flex-shrink: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 12px;
+    background: rgba(26, 22, 20, 0.03);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
   }
-  .hero { padding: 60px 24px 40px; }
+  .nav-tab.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  
+  /* Hero centered on mobile */
+  .hero {
+    padding: 60px 24px 40px;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .hero-eyebrow::before {
+    display: none;
+  }
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  /* Agent Header fixes to prevent text cutting off */
+  .agent-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+  .agent-number {
+    font-size: 44px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .agent-info {
+    flex: 1;
+    min-width: 0; /* allows flex container to wrap text properly instead of overflowing */
+  }
+  .agent-info h2 {
+    font-size: 22px;
+    line-height: 1.25;
+    word-wrap: break-word;
+  }
+  .agent-info p {
+    font-size: 13px;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+  
   .stats-inner { grid-template-columns: repeat(2,1fr); padding: 24px; }
   main { padding: 0 24px 60px; }
   .framework-card { padding: 32px 24px; }

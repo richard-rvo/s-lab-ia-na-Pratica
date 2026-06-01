@@ -24,6 +24,10 @@
     <div class="nav-logo">
       <img src="images/logo-color.png" alt="S-LAB Logo">
     </div>
+    <button class="nav-toggle-btn" id="navToggleBtn" onclick="toggleMobileMenu()" aria-label="Abrir menu">
+      <span>Menu</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="3" y1="12" x2="21" y2="12" class="line-1"></line><line x1="3" y1="6" x2="21" y2="6" class="line-2"></line><line x1="3" y1="18" x2="21" y2="18" class="line-3"></line></svg>
+    </button>
     <ul class="nav-tabs" id="navTabs">
       <li><button class="nav-tab active" data-tab="home">Início</button></li>
       <li><button class="nav-tab" data-tab="framework">Framework</button></li>
@@ -1682,6 +1686,11 @@
   <script>
 
     // ── NAVIGATION ───────────────────────────────────────────────────
+    function toggleMobileMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('menu-open');
+    }
+
     function showTab(tabName) {
       document.querySelectorAll('.tab-page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -1698,7 +1707,10 @@
     }
 
     document.querySelectorAll('.nav-tab').forEach(tab => {
-      tab.addEventListener('click', () => showTab(tab.dataset.tab));
+      tab.addEventListener('click', () => {
+        showTab(tab.dataset.tab);
+        document.querySelector('nav').classList.remove('menu-open');
+      });
     });
 
     function copyOutput(resultId, btnEl) {
