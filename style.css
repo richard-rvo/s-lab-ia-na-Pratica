@@ -85,7 +85,7 @@ nav {
   justify-self: start;
 }
 .nav-logo img {
-  height: 32px;
+  height: clamp(44px, 4vw, 56px);
   width: auto;
   display: block;
 }
@@ -794,7 +794,7 @@ footer {
     align-items: center;
   }
   .nav-logo img {
-    height: 28px;
+    height: 36px;
   }
   .nav-toggle-btn {
     display: inline-flex;
